@@ -1,0 +1,19 @@
+.table{
+	font-family: sans-serif;
+	border:1px solid gray;
+	margin: 10px auto;
+	padding:8px;
+}
+.tx_head_left{
+	text-align: left;
+}
+.image{
+	width: 200px;
+	height: auto;
+}
+.padding_img{
+	padding-right: 70%;
+}
+.data_padding_right{
+	padding-right: 60px;
+}

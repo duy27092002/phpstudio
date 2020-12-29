@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 1 (lesson 4)</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form id="form">
+		<h2 class="heading_margin">Thanh toán</h2>
+		<label><b>Tên đầy đủ</b></label>
+		<input type="text" placeholder="Nhập tên đầy đủ người mua hàng" required id="name" class="input"><br>
+		<label><b>Password</b></label>
+		<input type="password" placeholder="Nhập password" class="input" required><br>
+		<label><b>Email</b></label>
+		<input type="email" placeholder="Nhập email" class="input" required><br>
+		<label><b>Ngày sinh</b></label>
+		<input type="date" class="input"><br>
+		<label><b>Mặt hàng mua</b></label>
+		<input list="product" class="input"><br>
+		<datalist id="product">
+			<option value="shoes"></option>
+			<option value="shirt"></option>
+			<option value="socks"></option>
+			<option value="sandals"></option>
+			<option value="suitcase"></option>
+			<option value="bags"></option>
+		</datalist>
+		<label><b>Số lượng mua</b></label>
+		<input type="number" name="" min="1" max="5" class="input"><br>
+		<label><b>Bán kính vận chuyển</b></label>
+		<input type="range" name="" min="10" max="20" class="input"><br>
+		<button class="button_padding">Đăng kí</button>
+	</form>
+</body>
+</html>

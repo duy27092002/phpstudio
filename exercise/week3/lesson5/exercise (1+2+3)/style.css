@@ -1,0 +1,131 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.header{
+	font-family: 'Lora';
+	position: relative;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), 
+		rgba(0,0,0,0.3)), url('Materials/header.jpg');
+	background-repeat: no-repeat;
+	height: 600px;
+	background-size: cover;
+	object-fit: cover;
+	background-position: center;
+	color: #fff;
+}
+.menu_item{
+	list-style: none;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	padding-right: inherit;
+}
+.menu{
+	padding: 20px;
+	position: relative;
+}
+.menu_left{
+	font-size: 40px;
+}
+.menu_list{
+	display: inline-block;
+	margin-right: 25px;
+}
+.menu_link{
+	text-decoration: none;
+	color: #fff;
+}
+#active{
+	border: 1px solid #fff;
+	border-radius: 100px;
+}
+.special_link{
+	padding: 10px 15px;
+}
+.special_link:hover{
+	background-color: #fff;
+	color: #000;
+	transition: 0.3s;
+}
+.text_center{
+	text-align: center;
+}
+.title{
+	padding-top: 8%;
+}
+.paragraph_title{
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.text_size_lighter{
+	font-size: 65px;
+	font-weight: lighter;
+}
+.button{
+	background-color: rgb(54, 179, 168);
+	color: #fff;
+	padding: 17px;
+	border-radius: 100px;
+	font-size: 18px;
+}
+.button:hover{
+	background-color: rgba(54, 179, 168, 0.6);
+	cursor: pointer;
+}
+.content{
+	font-family: 'Open Sans';
+	margin: 100px 125px;
+}
+.ct_text{
+	margin-bottom: 125px;
+	line-height: 36px;
+}
+.text_size_28{
+	font-size: 28px;
+	font-weight: lighter;
+}
+.ct_paragraph{
+	margin-top: 16px;
+}
+.ct_photo{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-column-gap: 0px;
+}
+.photo{
+	margin: 0 80px;
+}
+.body_img{
+	width: calc(100% - 10px);
+	height: auto;
+}
+.text_color_margin_space{
+	color: rgb(61, 153, 145);
+	margin-top: 24px;
+	word-spacing: 2px;
+}
+.photo_para{
+	margin-top: 24px;
+	line-height: 36px;
+}
+.tx_color{
+	color: #808080;
+}
+.footer{
+	background-color: #000;
+	padding: 75px;
+}
+.ctn_footer{
+	margin: 0 40%;
+}
+.text_color_space{
+	color: #fff;
+	letter-spacing: 1px;
+}
+.text_margin_color{
+	margin-top: 16px;
+	color: gray;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 1 of Javascript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form id="form">
+		<table>
+			<tr>
+				<td>1st Number:</td>
+				<td><input type="number" id="firstNumber"></td>
+			</tr>
+			<tr>
+				<td>2nd Number:</td>
+				<td><input type="number" id="secondNumber"></td>
+			</tr>
+		</table>
+		<input type="button" value="Multiply" onClick="getMultiply()">
+		<input type="button" value="Divide" onClick="getDivide()">
+		<p>The result is: </p>
+		<p id="result"></p>
+		<script>
+			function getMultiply() {
+				var a = document.getElementById('firstNumber').value;
+				var b = document.getElementById('secondNumber').value;
+				var c =  (parseFloat(a) * parseFloat(b));
+				document.getElementById('result').innerHTML = c
+			}
+			function getDivide() {
+				var a = document.getElementById('firstNumber').value;
+				var b = document.getElementById('secondNumber').value;
+				var c =  (parseFloat(a) / parseFloat(b));
+				document.getElementById('result').innerHTML = c
+			}
+		</script>
+	</form>
+</body>
+</html>

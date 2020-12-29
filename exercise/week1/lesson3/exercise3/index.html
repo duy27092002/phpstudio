@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 3 (lesson 4)</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form class="form">
+		<h1>Application for permission to date my daughter</h1>
+		<p><b>Note: </b>Form is to be completed least 21 days prior to date</p>
+		<fieldset>
+			<legend><b>Personal Details</b></legend>
+			<label><b>Name:</b></label>
+			<input type="text" name="full_name" placeholder="Enter name here"><br>
+			<label><b>Address:</b></label>
+			<input type="text" name="address" placeholder="Enter address here"><br>
+			<label><b>Email:</b></label>
+			<input type="email" name="gmail" placeholder="Enter email here"><br>
+			<label><b>Phone Number:</b></label>
+			<input type="tel" name="telephone_number" placeholder="Enter 10 digit number" ><br>
+			<label><b>IQ:</b></label>
+			<input type="number" name=
+			"index" placeholder="Enter IQ here"><br>
+			<label><b>Gender</b></label><br>
+			<input type="radio" name="sex" id="male" value="male">
+			<label for="male">Male</label><br>
+			<input type="radio" name="sex" id="female" value="female" >
+			<label for="female">Female</label><br>
+			<input type="radio" name="sex" id="other" value="other">
+			<label for="other">Other</label><br>
+			<label><b>Date of Proposed Outing:</b></label>
+			<input type="date" name="date_time">
+		</fieldset>
+		<fieldset>
+			<p>Check All That Apply</p>
+			<input type="checkbox" name="checkbox">
+			<label>I have tattoos and/or piercings</label><br>
+			<input type="checkbox" name="checkbox">
+			<label>I am more than 2 years older than my daughter</label><br>
+			<input type="checkbox" name="checkbox">
+			<label>I own a panel van or V8 ute</label><br>
+			<input type="checkbox" name="checkbox">
+			<label>I work full-time</label><br>
+			<input type="checkbox" name="checkbox">
+			<label>My parents are rich</label><br>
+			<input type="checkbox" name="checkbox">
+			<label>Is the date at a well lit public location</label>
+		</fieldset>
+		<fieldset>
+			<label><b>Political Persuasion:</b></label>
+			<input list="dropdown_menu1" >
+			<datalist id="dropdown_menu1">
+				<option value="Left Wing"></option>
+				<option value="Right Wing"></option>
+				<option value="Conservative"></option>
+				<option value="Nazi"></option>
+			</datalist>
+			<label><b>Education Level Completed:</b></label>
+			<input list="dropdown_menu2" >
+			<datalist id="dropdown_menu2">
+				<option value="University"></option>
+				<option value="College"></option>
+				<option value="High School"></option>
+				<option value="None"></option>
+			</datalist>
+		</fieldset>
+		<fieldset>
+			<legend><b>Essay Section</b></legend>
+			<label>In 50 words or more explain why you want to date my daughter</label><br>
+			<input type="text" name="text" placeholder="Enter Text Here" minlength="50" class="input_large"><br>
+			<label>Please upload contact details for 2 references</label><br>
+			<input type="text" name="text" placeholder="Enter Text Here" class="input_large">
+			<p>Upload Police Clearance Certificate, Bank Statement and Medical Certificates here:<button>Choose File</button>No file chosen</p>
+		</fieldset>
+		<button>Send your application</button>
+	</form>
+</body>
+</html>

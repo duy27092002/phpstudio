@@ -1,0 +1,40 @@
+.section{
+	background-color: #EE9A49;
+	width: 100%;
+	min-height: 500px;
+}
+.content{
+	width: 50%;
+	min-height: 300px;
+	border: 3px dotted black;
+	margin: 15px auto;
+	background-color: cornsilk;
+	line-height: 1.5;
+}
+.section, .content{
+	padding: 15px;
+}
+#ct_paragraph{
+	margin: 15px 0;
+}
+#date_update{
+	margin-left: 40%;
+}
+.btn{
+	width: 100px;
+	height: 30px;
+	background-color: blue;
+	border-radius: 3px;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+.footer{
+	background-color: #0ff;
+	width: 200px;
+	font-size: 13px;
+	padding: 8px;
+	border-radius: 15px;
+	text-align: center;
+}

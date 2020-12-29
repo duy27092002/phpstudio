@@ -1,0 +1,39 @@
+.section{
+	background-color: #F6F3E5;
+	width: 100%;
+	font-family: sans-serif;
+	padding: 15px;
+}
+.content{
+	width: 80%;
+	min-height: 460px;
+	margin: 5px auto;
+	background-color: white;
+	padding: 12px 10px;
+}
+.heading_margin{
+	margin: 20px 5px;
+}
+.paragraph{
+	margin-bottom: 20px;
+}
+.article{
+	float: left;
+	width: 70%;
+}
+.sidebar{
+	float: left;
+	width: 30%;
+}
+#sidebar1{
+	background-color: #ffffcc;
+}
+#sidebar2{
+	background-color: #ffeeee;
+}
+#sidebar3{
+	background-color: #CCFFFF;
+}
+.item{
+	margin: 10px 0 10px 40px;
+}

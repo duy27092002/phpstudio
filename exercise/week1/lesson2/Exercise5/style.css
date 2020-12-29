@@ -1,0 +1,29 @@
+.section{
+	font-family: sans-serif;
+	border:1px solid black;
+	border-radius: 5px;
+	width: 35%;
+	margin: 15px auto;
+	padding: 20px;
+}
+#add{
+	text-align: center;
+	width: 40px;
+}
+.result_padding{
+	padding: 40px 0 5px 0;
+}
+#table{
+	width: 35%;
+	height: 150px;
+	margin-bottom: 15px;
+	border:1px solid black;
+	text-align: center;
+}
+.table_head, .table_data{
+	border:1px solid black;
+	text-align: center;
+}
+.button_click{
+	margin-right: 10px;
+}

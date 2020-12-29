@@ -1,0 +1,15 @@
+.section{
+	width:600px;
+	min-height:300px;
+	border:1px solid gray;
+	margin:10px auto;
+	text-indent:10px;
+	line-height: 1.5;
+}
+.tx_border_padding, .content{
+	border-bottom:2px solid gray;
+	padding-bottom: 15px;
+}
+#number_list_indent{
+	text-indent:36px;
+}

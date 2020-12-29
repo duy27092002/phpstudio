@@ -1,0 +1,17 @@
+
+.table{
+	border:1px solid gray;
+	margin: 10px auto;
+	font-family: sans-serif;
+	width: 80%;
+}
+.image{
+	width:200px;
+	height: auto;
+	padding: 8px;
+}
+.table_head, .table_data{
+	border:1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+}

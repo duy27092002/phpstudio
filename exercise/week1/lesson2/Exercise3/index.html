@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 3</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form action="#" class="form">
+		<h1>Travel reservation form</h1>
+		<h2 class="text_margin">* denotes mandotory</h2>
+		<label>Full name* :</label><br>
+		<input type="text" placeholder="FirstName LastName" class="input"><br>
+		<label>Email address* :</label><br>
+		<input type="email" class="input"><br>
+		<label>Select Tour Package* :</label><br>
+		<input list="browsers" placeholder="Goa" class="input"><br>
+			<datalist id="browsers">
+				<option value="option 1">
+				<option value="option 2">
+				<option value="option 3">
+				<option value="option 4">
+			</datalist>
+		<label>Arrival date* :</label><br>
+		<input type="date" class="input"><br>
+		<label>Number of persons* :</label><br>
+		<input type="number" class="input"><br>	
+		<p>What would you want to avail?</p>
+		<table>
+			<tr>
+				<td><label >Boarding</label></td>
+				<td><input type="checkbox" class="input"></td>
+			</tr>
+			<tr>
+				<td><label >Fooding</label></td>
+				<td><input type="checkbox" class="input"></td>
+			</tr>
+			<tr>
+				<td><label >Sight seeing</label></td>
+				<td><input type="checkbox" class="input"></td>
+			</tr>
+		</table>
+		<label>Discount coupon code:</label><br>
+		<input type="text" class="input"><br>	
+		<label>Terms and conditions* :</label><br>
+		<input type="radio" id="agree" name="checkbox" class="input">
+		<label for="agree">I agree</label>
+		<input type="radio" id="disagree" name="checkbox" class="input">
+		<label for="disagree">I disagree</label><br>
+		<button>Complete reservation</button>
+	</form>
+</body>
+</html>

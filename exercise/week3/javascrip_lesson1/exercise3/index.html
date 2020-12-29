@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 3 of Javascript</title>
+</head>
+<body>
+	<div id="pattern"></div>
+	<script type="text/javascript">
+		var temp = document.getElementById('pattern');
+		for (var i = 1; i < 26; i++) {
+			if (i%5===0) {
+				temp.innerHTML +='* <br>';
+			} else {
+				temp.innerHTML +='* ';
+			}
+		}
+	</script>
+</body>
+</html>

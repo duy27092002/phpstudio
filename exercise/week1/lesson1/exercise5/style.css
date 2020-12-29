@@ -1,0 +1,22 @@
+.section{
+	background-color:green;
+	padding-left:10px;
+}
+.tx_red{
+	color:red;
+}
+.tx_white{
+	color:white;
+}
+.margin_top{
+	margin-top:10px;
+}
+.tx_center{
+	text-align: center;
+}
+.bg_color{
+	background-color:yellow;
+	margin:10px 10px 10px 0;
+}.padding_bottom{
+	padding-bottom:10px;
+}

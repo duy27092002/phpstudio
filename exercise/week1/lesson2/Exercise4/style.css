@@ -1,0 +1,15 @@
+.table{
+	font-family: sans-serif;
+	font-size: 20px;
+	width: 50%;
+	margin: 10px auto;
+}
+.table, .table_data{
+	border:2px solid black;
+	border-collapse: collapse;
+	height: 40px;
+	padding: 10px;
+}
+.text_center{
+	text-align: center;
+}

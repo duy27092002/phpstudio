@@ -1,0 +1,17 @@
+.form{
+	border: 1px solid black;
+	min-height: 430px;
+	width: 40%;
+	margin: 15px auto;
+	padding: 15px;
+	font-family: sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	font-size:16px;
+}
+.input{
+	padding-left: 5px;
+}
+.text_margin{
+	margin: 20px 0;
+}

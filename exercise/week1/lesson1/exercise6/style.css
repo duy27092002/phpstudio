@@ -1,0 +1,23 @@
+.section{
+	font-family:san-serif;
+	padding: 15px;
+}
+.tx_margin{
+	margin:25px 0;
+}
+.para_margin_top{
+	margin-top:15px;
+}
+#image_left, #text_right{
+	float:left;
+}
+.display_img_tx{
+	display: inline;
+}
+#text_right{
+	text-align: center;
+	margin-top: 30px;
+}
+#image_left {
+	padding-top:130px;
+}

@@ -1,0 +1,10 @@
+.tx_padding_color{
+	padding-top:10px;
+	color:red;
+}
+.tx_color{
+	color: white;
+}
+.tx_margin, .para_margin{
+	margin-left:10px;
+}

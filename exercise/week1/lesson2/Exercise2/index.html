@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form class="order_form">
+		<h1 class="tx_purple_padding">A Simple Form</h1>
+		<h2 class="tx_lightred_padding">Form fundamental</h2>
+		<fieldset class="fieldset_customer fieldset_padding">
+			<legend><b>Customer Info</b></legend><br>
+			<p>
+				<label><b>Name:</b></label>
+				<input type="text" placeholder="Enter your name" autofocus size="50" class="input input_padding"></p><br>
+			<p>
+				<label><b>Telephone:</b></label>
+				<input type="tel" placeholder="Pattern: 1-234-567-8910" class="input input_padding">
+			</p><br>
+			<p>
+				<label><b>Email address:</b></label>
+				<input type="email" placeholder="Enter your email address" size="50" class="input input_padding">
+			</p><br>
+			<p>
+				<label><b>Gender:</b></label>
+				<input type="radio" name="sex" id="Male">
+				<label for="Male" class="space_choose">Male</label>
+				<input type="radio" name="sex" id="Female">
+				<label for="Female">Female</label>
+			</p><br>
+			<p>
+				<label><b>Hobbies:</b></label>
+				<input type="checkbox" id="Basketball">
+				<label for="Basketball" class="space_choose">Basketball
+				</label>				
+				<input type="checkbox" id="Football">
+				<label for="Football" class="space_choose">Football</label>
+				<input type="checkbox" id="Badminton">
+				<label for="Badminton" class="space_choose">Badminton
+				</label>
+			</p>
+		</fieldset>
+		<fieldset class="fieldset_books fieldset_padding">
+			<legend><b>Books</b></legend><br>
+			<p>
+				<label><b>Name:</b></label>
+				<input type="text" class="input_name input_padding">
+				<label><b>Quantity (Maximum 5)</b></label>
+				<input type="number" min="1" max="5" class="input_quantity">
+			</p>
+		</fieldset>
+		<button type="submit" class="button">Submit</button>
+		<button type="reset" class="button">Reset</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.form{
+	font-family: sans-serif;
+	width: 80%;
+	margin: 10px auto;
+	border: 1px solid gray;
+	padding: 15px;
+	line-height: 2;
+}
+.input_large{
+	width: 500px;
+	height: 100px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 6 of Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = ['1','2','3'],
+		    b = ['100','2','1','10','3'],
+		    c = [];
+		for (var i = 0; i < a.length; i++) {
+			for (var j = 0; j < b.length; j++) {
+				var d = (a[i]===b[j]);
+				if (d) {
+					console.log(c.push(d));
+				}
+			}
+		}
+	</script>
+</body>
+</html>

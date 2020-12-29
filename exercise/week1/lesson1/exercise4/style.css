@@ -1,0 +1,26 @@
+.section{
+			background-color:green;
+			padding-left:10px;
+}
+.tx_red_padding{
+			color:red;
+			padding:10px 0 5px 0;
+}
+.tx_while_padding{
+			color:white;
+			padding:10px 0 15px 0;
+}
+.bg_color{
+			background-color:yellow;
+			margin:10px 10px 10px 0;
+}
+.copyright{
+			font-size:12px;
+			padding:10px 0;
+}
+.margin_top{
+			margin-top:10px;
+}
+.tx_center{
+			text-align:center;
+}

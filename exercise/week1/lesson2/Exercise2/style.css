@@ -1,0 +1,44 @@
+.order_form{
+	width: 50%;
+	margin: 15px auto;
+	border: 1px solid black;
+	padding: 10px;
+	line-height: 10px;
+}
+.tx_purple_padding{
+	color: purple;
+	padding-bottom: 20px;
+}
+.tx_lightred_padding{
+	color: #FF4E5D;
+	padding-bottom: 15px;
+}
+.fieldset_customer{
+	min-height: 250px;
+}
+.fieldset_books{
+	min-height: 90px;
+}
+.fieldset_padding{
+	padding-left: 10px;
+}
+.input{
+	width: 400px;
+	height: 25px;
+}
+.space_choose{
+	padding-right: 30px;
+}
+.input_name{
+	width: 400px;
+}
+.input_padding{
+	padding-left: 5px;
+}
+.input_quantity{
+	width:30px;
+}
+.button{
+	width: 60px;
+	border-radius: 2px;
+}
