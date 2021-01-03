@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 6</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<form id="form_login">
+		<h2 class="tx_center tx_uppercase tx_lighter">đăng nhập với</h2>
+		<p class="btn_center">
+			<button class="bg_blue tx_color btn_padding btn_size btn_border"><i class="fa fa-facebook-f"></i>Facebook</button>
+			<button class="bg_red tx_color btn_padding btn_size btn_border"><i class="fa fa-google"></i>Google</button>
+			<button class="bg_green tx_color btn_padding btn_size btn_border"><i class="fa fa-phone"></i>Phone</button>
+		</p>
+		<h3 class="tx_center tx_uppercase tx_lighter">hoặc</h3>
+		<p>
+			<label>
+				<b class="label_color">Email</b>
+				<b class="star_red">*</b>
+			</label><br>
+			<input type="email" name="Email" id="email" class="input_width input_padding" required>
+		</p>
+		<p>
+			<label>
+				<b class="label_color">Mật khẩu</b>
+				<b class="star_red">*</b>
+			</label><br>
+			<input type="password" name="Password" id="password" class="input_width input_padding" required>
+		</p>
+		<table>
+			<tr>
+				<td class="data_large">
+					<input type="checkbox" id="automatically" name="automaticallyLogin">
+					<label for="automatically" class="label_color">Tự động đăng nhập</label>
+				</td>
+				<td class="label_color">Quên mật khẩu?</td>
+			</tr>
+		</table>
+		<p>
+			<input type="submit" id="login" name="Login" class="submit" value="ĐĂNG NHẬP">
+		</p>
+		<p class="tx_center">Bạn chưa có tài khoản?</p>
+		<input type="submit" id="segistration" name="fastSegistration" class="submit" value="ĐĂNG KÝ NHANH">
+	</form>
+</body>
+</html>

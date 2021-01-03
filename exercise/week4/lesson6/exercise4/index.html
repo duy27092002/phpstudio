@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 4</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<form id="form_registration">
+		<h2 class="title_center">Đăng ký thành viên</h2>
+		<p>Để đăng ký thành viên, bạn cần khai báo tất cả các ô trống dưới đây</p>
+		<div class="enter_info">
+			<p><input type="text" id="họ_đệm" name="họ_đệm"placeholder="Họ và tên đệm" class="input_max_width input_padding"></p>
+			<p><input type="text" id="tên" name="tên" placeholder="Tên" class="input_max_width input_padding"></p>
+			<p><input type="text" id="tên_đăng_nhập" name="tên_đăng_nhập" placeholder="Tên đăng nhập" class="input_max_width input_padding"></p>
+			<p><input type="email" id="email" name="email" placeholder="Email" class="input_max_width input_padding"></p>
+			<p><input type="password" id="mật_khẩu_lần1" name="mật_khẩu_lần1" placeholder="Mật khẩu" class="input_max_width input_padding"></p>
+			<p><input type="password" id="mật_khẩu_lần2" name="mật_khẩu_lần2" placeholder="Lặp lại mật khẩu" class="input_max_width input_padding"></p>
+			<table>
+				<tr>
+					<td class="data_large"><label><b>Giới tính</b></label></td>
+					<td>
+						<input type="radio" id="N/A" name="giới_tính" value="N/A">
+						<label for="N/A"><b>N/A</b></label>
+					</td>
+					<td>
+						<input type="radio" id="Nam" name="giới_tính" value="Nam">
+						<label for="Nam"><b>Nam</b></label>
+					</td>
+					<td>
+						<input type="radio" id="Nữ" name="giới_tính" value="Nữ">
+						<label for="Nữ"><b>Nữ</b></label>
+					</td>
+				</tr>
+			</table>
+			<p>
+				<input type="text" id="ngày_sinh" name="ngày_sinh" placeholder="Ngày tháng năm sinh" class="input_short_width input_padding">
+				<button class="btn_padding"><i class="fa fa-calendar"></i></button>
+			</p>
+			<p><input type="text" id="chữ_ký" name="chữ_ký" placeholder="Chữ ký" class="input_max_width input_signword input_padding"></p>
+			<p>
+				<input type="text" id="câu_hỏi" name="câu_hỏi" placeholder="Câu hỏi bảo mật" class="input_short_width input_padding">
+				<button class="btn_padding"><i class="fa fa-caret-down"></i></button>
+			</p>
+			<p><input type="text" id="trả_lời" name="trả_lời" placeholder="Trả lời câu hỏi" class="input_max_width input_padding"></p>
+		</div>
+		<div class="check_agree">
+			<p>
+				<input type="checkbox" id="agree" name="agree" value="Agree">
+				<label for="agree">Tôi đồng ý với</label>
+				<button>Quy định đăng ký thành viên</button>
+			</p>
+			<p>
+				<input type="reset" value="Thiết lập lại" class="reset">
+				<input type="submit" value="Đăng ký thành viên" class="submit">
+			</p>
+		</div>
+	</form>
+</body>
+</html>

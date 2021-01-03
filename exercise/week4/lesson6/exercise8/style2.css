@@ -1,0 +1,18 @@
+.container{
+	background-image: url('images/bg2_page.jpg');
+	background-size: cover;
+	height: 730px;
+	font-size: 20px;
+}
+.photo_width{
+	width: 400px;
+}
+.photo_radius{
+	border-radius: 50%;
+}
+.tbl_info{
+	padding: 15% 0 0 15%;
+}
+.tx_color{
+	color: purple;
+}

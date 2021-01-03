@@ -1,0 +1,58 @@
+#form_login{
+	width: 30%;
+	margin: 0px auto;
+	border: 5px solid #1E90FF;
+	padding: 15px 15px 30px 15px;
+}
+.tx_center, .btn_center{
+	text-align: center;
+}
+.tx_uppercase{
+	text-transform: uppercase;
+}
+.tx_lighter{
+	font-weight: lighter;
+}
+.tx_color, #login{
+	color: #fff;
+}
+.bg_blue{
+	background-color: #00008B;
+}
+.bg_red{
+	background-color: red;
+}
+.bg_green{
+	background-color: #9ACD32;
+}
+.btn_size, #login, #segistration{
+	font-size: 17px;
+}
+.btn_padding{
+	padding: 10px 30px;
+}
+.btn_border, #login{
+	border: none;
+}
+.label_color{
+	color: #1E90FF;
+}
+.star_red{
+	color: red;
+}
+.input_width{
+	width: 97%;
+}
+.input_padding, #segistration{
+	padding: 5px;
+}
+.data_large{
+	width: 75%;
+}
+#login{
+	background-color: #1E90FF;
+}
+#segistration, #login{
+	width: 100%;
+	padding:10px;
+}

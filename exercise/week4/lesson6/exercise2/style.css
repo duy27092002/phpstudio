@@ -1,0 +1,22 @@
+.section{
+	width: 80%;
+	border: 1px solid gray;
+	margin: 0 auto;
+	text-align: center;
+	font-family: sans-serif;
+}
+.table_center{
+	margin: 0 auto;
+}
+.text_color{
+	color: #FF8C00;
+}
+.text_size{
+	font-size: 60px;
+}
+.para_color{
+	color: #696969;
+}
+.data_padding{
+	padding: 25px;
+}

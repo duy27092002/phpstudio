@@ -1,0 +1,49 @@
+.section{
+	border: 1px solid gray;
+	width: 65%;
+	margin: 0px auto;
+	min-height: 500px;
+}
+.tb_padding{
+	padding: 0 15px;
+}
+.text_size{
+	font-size: 40px;
+	font-weight: lighter;
+}
+.para_color{
+	color: #778899;
+}
+.text_bold{
+	color: #696969;
+}
+#small_phone{
+	font-size: 300px;
+	margin-right: 20px;
+}
+#big_phone{
+	font-size: 400px;
+}
+.data_padding{
+	padding-left: 110px;
+}
+#btn_blue, #btn_green{
+	text-transform: uppercase;
+	color: #fff;
+	padding: 13px;
+	border-radius: 20px;
+	border: none;
+	word-spacing: 3px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-top: 15px;
+}
+#btn_blue{
+	background-color: #1E90FF;
+	width: 270px;
+}
+#btn_green{
+	background-color: #32CD32;
+	width: 150px;
+}

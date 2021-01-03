@@ -1,0 +1,17 @@
+.imformation{
+	font-size: 20px;
+	background-image: url('images/bg_page.jpg');
+	background-size: cover;
+	height: 730px;
+}
+.personal_photo{
+	border-radius: 50%;
+	width: 80%;
+	height: auto;
+}
+.tbl_info{
+	padding: 9% 0 0 5%;
+}
+.tx_color{
+	color: red;
+}

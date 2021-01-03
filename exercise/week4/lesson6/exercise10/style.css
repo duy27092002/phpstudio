@@ -1,0 +1,32 @@
+.container{
+	width: 50%;
+	margin: 0px auto;
+	padding: 20px 40px;
+	border: 1px solid gray;
+	font-family: sans-serif;
+	line-height: 1.2;
+}
+.header_center{
+	text-align: center;
+}
+.content{
+	margin-top: 37px;
+}
+.contact_size{
+	font-size: 18px;
+}
+.tx_transform{
+	text-transform: uppercase;
+}
+.tx_margin{
+	margin: 0px;
+}
+.para_float{
+	float: right;
+}
+.para_margin{
+	margin: 6px 0px;
+}
+.underline_margin{
+	margin: 1px 0px;
+}

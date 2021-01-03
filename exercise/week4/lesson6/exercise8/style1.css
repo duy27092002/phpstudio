@@ -1,0 +1,106 @@
+.container{
+	font-family: sans-serif;
+}
+.header{
+	background-image: url('images/banner.jpg');
+	background-size: cover;
+	min-height: 900px;
+}
+.nav{
+	width: 90%;
+	min-height: 50px;
+}
+.data_large{
+	width: 44%;
+}
+.nav_items{
+	list-style: none;
+}
+.list_item{
+	display: inline-block;
+	margin-right: 15px;
+}
+.item{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+.item:hover, .active{
+	color: yellow;
+}
+.active{
+	border: 1px solid #fff;
+	padding: 10px;
+    border-radius: 15px;
+}
+.content{
+	width: 80%;
+}
+.nav, .content{
+	margin: 0px auto;
+}
+.ct_main, .news{
+	float: left;
+}
+.ct_main{
+	width: 66%;
+	min-height: 890px;
+	margin: 18px;
+	padding: 10px;
+	line-height: 1.5;
+}
+.title_color, .new_color{
+    color: #316fbc;
+}
+.title_size{
+	font-size: 15px;
+}
+.title_transform, .item{
+	text-transform: uppercase;
+}
+.title_bold, .food_name, .new_bold{
+	font-weight: bold;
+}
+.food_name{
+	font-size: 36px;
+    color: #194081;
+    line-height: 0.5;
+    margin-bottom: 11px;
+}
+.food_today, .photo_new{
+	width: 100%;
+	height: auto;
+}
+.time{
+	color: gray;
+	margin: 0px 0px 6px 0px;
+}
+.center{
+	text-align: center;
+}
+.tx_red, #link_visit:hover, #link_youtube:hover, .new_hover:hover{
+	color: red;
+}
+.link_visit{
+	float: right;
+}
+.news{
+	width: 28%;
+	min-height:890px;
+	margin: 18px 0px;
+}
+.food_suggest{
+	background-image: url('images/food_other.jpg');
+	background-size: cover;
+	clear: left;
+	min-height: 600px;
+}
+.footer{
+	min-height: 80px;
+	background-color: #B5B5B5;
+}
+.copyright{
+	margin: 0px;
+	padding: 30px;
+	font-size: 18px;
+}

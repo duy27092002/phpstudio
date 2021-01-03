@@ -1,0 +1,53 @@
+.container{
+	color: #fff;
+}
+.section{
+	min-height: 300px;
+	border: 1px solid gray;
+	background-color: #222222;
+	width: 100%;
+}
+.table{
+	width: 80%;
+	margin: 0 auto;
+}
+.data_large{
+	width: 55%;
+}
+.data_small{
+	padding-top: 45px;
+	width: 15%;
+}
+.text_margin{
+    margin-top: -18px;
+}
+#email{
+	padding: 10px;
+	background-color: #444444;
+	width: 250px;
+}
+.btn_email{
+	padding: 10px 15px;
+	background-color: #00CCCC;
+	color: #fff;
+}
+.btn_email, #email{
+	border: none;
+}
+.footer{
+	background-color: #444444;
+	min-height: 80px;
+}
+.number_size{
+	font-size: 26px;
+}
+.number_bg{
+	background-color: #9966CC;
+}
+.number_padding{
+	padding: 10px 30px;
+	width: 95px;
+}
+.copyright_float{
+	float: right;
+}

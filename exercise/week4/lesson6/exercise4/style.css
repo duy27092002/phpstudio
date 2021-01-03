@@ -1,0 +1,41 @@
+#form_registration{
+	width: 75%;
+	margin: 0 auto;
+	padding: 5px;
+	background-color: #FFFFCC;
+	border: 1px solid black;
+}
+.title_center{
+	text-align: center;
+}
+.enter_info{
+	padding: 0px 10px;
+}
+.input_max_width{
+	width: 98%;
+}
+.input_padding{
+	padding: 10px;
+}
+.input_signword{
+	height: 60px;
+}
+.input_short_width{
+	width: 94%;
+}
+.btn_padding{
+	padding: 10px;
+}
+.data_large{
+	width: 70%;
+}
+.check_agree{
+	text-align: center;
+}
+.submit, .reset{
+	padding:10px; 
+}
+.submit{
+	background-color: #0099CC;
+	border-radius: 3px;
+}
