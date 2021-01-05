@@ -1,4 +1,4 @@
-#form_create_cv{
+#create_cv{
 	width: 75%;
 	margin: 0 auto;
 	border: 10px solid #1E90FF;
@@ -22,12 +22,12 @@
 	background-color: #FFF5EE;
 	padding: 10px;
 }
-.underline_width{
+.underline{
 	width: 40%;
 	position: relative;
     left: -30%;
 }
-.data_left{
+.enter_info{
 	padding-left: 15px;
 }
 .label_color{
@@ -41,6 +41,8 @@
 }
 .input_width, .submit{
 	width: 97%;
+}
+.input_padding, .submit{
 	padding: 5px;
 }
 .submit{
