@@ -6,27 +6,27 @@
 	font-family: sans-serif;
 	line-height: 1.2;
 }
-.header_center{
+.align-center{
 	text-align: center;
 }
 .content{
 	margin-top: 37px;
 }
-.contact_size{
+.size-18{
 	font-size: 18px;
 }
-.tx_transform{
+.uppercase{
 	text-transform: uppercase;
 }
-.tx_margin{
+.margin-0{
 	margin: 0px;
 }
-.para_float{
+.float-right{
 	float: right;
 }
-.para_margin{
+.margin-6-0{
 	margin: 6px 0px;
 }
-.underline_margin{
+.margin-1-0{
 	margin: 1px 0px;
 }

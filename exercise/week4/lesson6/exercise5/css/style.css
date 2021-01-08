@@ -1,4 +1,4 @@
-#create_cv{
+#create-cv{
 	width: 75%;
 	margin: 0 auto;
 	border: 10px solid #1E90FF;
@@ -6,12 +6,12 @@
 	padding: 15px;
 	font-family: sans-serif;
 }
-.bg_image{
-	background-image: url('images/photo_5_cv.png');
+.bg-image{
+	background-image: url(../images/photo5.jpg);
 	background-size: cover;
 	height: 400px;
 }
-.title_section{
+.title-section{
 	width: 36%;
 	color: #000;
 	min-height: 120px;
@@ -27,22 +27,22 @@
 	position: relative;
     left: -30%;
 }
-.enter_info{
+#form-sign{
 	padding-left: 15px;
 }
-.label_color{
+.text-color{
 	color: #1E90FF;
 }
-.label_bold, .submit{
+.text-bold{
 	font-weight: bold;
 }
-.star_red{
+.star-red{
 	color: red;
 }
-.input_width, .submit{
+.width-97{
 	width: 97%;
 }
-.input_padding, .submit{
+.padding-5{
 	padding: 5px;
 }
 .submit{
@@ -50,6 +50,6 @@
 	color: #fff;
 	border: none;
 }
-.question_center{
+.align-center{
 	text-align: center;
 }

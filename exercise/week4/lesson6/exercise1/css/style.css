@@ -1,20 +1,22 @@
-.section{
+.container{
 	border: 1px solid gray;
 	width: 65%;
 	margin: 0px auto;
 	min-height: 500px;
 }
-.tb_padding{
+.padding-0-15{
 	padding: 0 15px;
 }
-.text_size{
+.size-40{
 	font-size: 40px;
+}
+.text_lighter{
 	font-weight: lighter;
 }
 .para_color{
 	color: #778899;
 }
-.text_bold{
+.bold_color{
 	color: #696969;
 }
 #small_phone{
@@ -24,7 +26,7 @@
 #big_phone{
 	font-size: 400px;
 }
-.data_padding{
+.padding-left-110{
 	padding-left: 110px;
 }
 #btn_blue, #btn_green{

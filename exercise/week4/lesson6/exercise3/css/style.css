@@ -1,4 +1,4 @@
-.container{
+.container, .btn-email{
 	color: #fff;
 }
 .section{
@@ -11,43 +11,46 @@
 	width: 80%;
 	margin: 0 auto;
 }
-.data_large{
+.width-55{
 	width: 55%;
 }
-.data_small{
-	padding-top: 45px;
+.width-15{
 	width: 15%;
 }
-.text_margin{
+.padding-top-45{
+	padding-top: 45px;
+}
+.margin-top--18{
     margin-top: -18px;
 }
 #email{
 	padding: 10px;
 	background-color: #444444;
-	width: 250px;
+	width: 35%;
 }
-.btn_email{
+.btn-email{
 	padding: 10px 15px;
 	background-color: #00CCCC;
-	color: #fff;
 }
-.btn_email, #email{
+.btn-email, #email{
 	border: none;
 }
 .footer{
 	background-color: #444444;
 	min-height: 80px;
 }
-.number_size{
+.size-26{
 	font-size: 26px;
 }
-.number_bg{
+.number-bg{
 	background-color: #9966CC;
 }
-.number_padding{
+.padding-10-30{
 	padding: 10px 30px;
-	width: 95px;
 }
-.copyright_float{
+.width-25{
+	width: 25%;
+}
+.float-right{
 	float: right;
 }

@@ -1,58 +1,60 @@
-#form_login{
+#form-login{
 	width: 30%;
 	margin: 0px auto;
 	border: 5px solid #1E90FF;
 	padding: 15px 15px 30px 15px;
 }
-.tx_center, .btn_center{
+.align-center{
 	text-align: center;
 }
-.tx_uppercase{
+.uppercase{
 	text-transform: uppercase;
 }
-.tx_lighter{
+.tx-lighter{
 	font-weight: lighter;
 }
-.tx_color, #login{
+.tx-color{
 	color: #fff;
 }
-.bg_blue{
+.bg-blue{
 	background-color: #00008B;
 }
-.bg_red{
+.bg-red{
 	background-color: red;
 }
-.bg_green{
+.bg-green{
 	background-color: #9ACD32;
 }
-.btn_size, #login, #segistration{
+.size-17{
 	font-size: 17px;
 }
-.btn_padding{
+.padding-10-30{
 	padding: 10px 30px;
 }
-.btn_border, #login{
+.border-none{
 	border: none;
 }
-.label_color{
+.label-color{
 	color: #1E90FF;
 }
-.star_red{
+.color-red{
 	color: red;
 }
-.input_width{
+.width-97{
 	width: 97%;
 }
-.input_padding, #segistration{
+.padding-5{
 	padding: 5px;
 }
-.data_large{
+.width-75{
 	width: 75%;
 }
 #login{
 	background-color: #1E90FF;
 }
-#segistration, #login{
-	width: 100%;
+.padding-10{
 	padding:10px;
+}
+.width-100{
+	width: 100%;
 }

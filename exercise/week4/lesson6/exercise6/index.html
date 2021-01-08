@@ -3,46 +3,46 @@
 <head>
 	<meta charset="utf-8">
 	<title>Exercise 6</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<form id="form_login">
-		<h2 class="tx_center tx_uppercase tx_lighter">đăng nhập với</h2>
-		<p class="btn_center">
-			<button class="bg_blue tx_color btn_padding btn_size btn_border"><i class="fa fa-facebook-f"></i>Facebook</button>
-			<button class="bg_red tx_color btn_padding btn_size btn_border"><i class="fa fa-google"></i>Google</button>
-			<button class="bg_green tx_color btn_padding btn_size btn_border"><i class="fa fa-phone"></i>Phone</button>
+	<form id="form-login">
+		<h2 class="align-center uppercase tx-lighter">đăng nhập với</h2>
+		<p class="align-center">
+			<button class="bg-blue tx-color padding-10-30 size-17 border-none"><i class="fa fa-facebook-f"></i>Facebook</button>
+			<button class="bg-red tx-color padding-10-30 size-17 border-none"><i class="fa fa-google"></i>Google</button>
+			<button class="bg-green tx-color padding-10-30 size-17 border-none"><i class="fa fa-phone"></i>Phone</button>
 		</p>
-		<h3 class="tx_center tx_uppercase tx_lighter">hoặc</h3>
+		<h3 class="align-center uppercase tx-lighter">hoặc</h3>
 		<p>
 			<label>
-				<b class="label_color">Email</b>
-				<span class="star_red">*</span>
+				<b class="label-color">Email</b>
+				<span class="color-red">*</span>
 			</label><br>
-			<input type="email" name="Email" id="email" class="input_width input_padding" required>
+			<input type="email" name="Email" id="email" class="width-97 padding-5" required>
 		</p>
 		<p>
 			<label>
-				<b class="label_color">Mật khẩu</b>
-				<span class="star_red">*</span>
+				<b class="label-color">Mật khẩu</b>
+				<span class="color-red">*</span>
 			</label><br>
-			<input type="password" name="Password" id="password" class="input_width input_padding" required>
+			<input type="password" name="Password" id="password" class="width-97 padding-5" required>
 		</p>
 		<table>
 			<tr>
-				<td class="data_large">
+				<td class="width-75">
 					<input type="checkbox" id="automatically" name="automaticallyLogin">
-					<label for="automatically" class="label_color">Tự động đăng nhập</label>
+					<label for="automatically" class="label-color">Tự động đăng nhập</label>
 				</td>
-				<td class="label_color">Quên mật khẩu?</td>
+				<td class="label-color">Quên mật khẩu?</td>
 			</tr>
 		</table>
 		<p>
-			<input type="submit" id="login" name="Login" class="submit" value="ĐĂNG NHẬP">
+			<input type="submit" id="login" name="Login" class="tx-color size-17 border-none padding-10 width-100" value="ĐĂNG NHẬP">
 		</p>
-		<p class="tx_center">Bạn chưa có tài khoản?</p>
-		<input type="submit" id="segistration" name="fastSegistration" class="submit" value="ĐĂNG KÝ NHANH">
+		<p class="align-center">Bạn chưa có tài khoản?</p>
+		<input type="submit" id="segistration" name="fastSegistration" class=" size-17 padding-10 width-100" value="ĐĂNG KÝ NHANH">
 	</form>
 </body>
 </html>

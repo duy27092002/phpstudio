@@ -2,7 +2,7 @@
 	font-family: sans-serif;
 }
 .header{
-	background-image: url('images/banner.jpg');
+	background-image: url(../images/banner.jpg);
 	background-size: cover;
 	min-height: 900px;
 }
@@ -10,13 +10,13 @@
 	width: 90%;
 	min-height: 50px;
 }
-.data_large{
+.width-44{
 	width: 44%;
 }
-.nav_items{
+.list-style-none{
 	list-style: none;
 }
-.list_item{
+.list-item{
 	display: inline-block;
 	margin-right: 15px;
 }
@@ -39,58 +39,57 @@
 .nav, .content{
 	margin: 0px auto;
 }
-.ct_main, .news{
+.float-left{
 	float: left;
 }
-.ct_main{
+.ct-main{
 	width: 66%;
 	min-height: 890px;
 	margin: 18px;
 	padding: 10px;
 	line-height: 1.5;
 }
-.title_color, .new_color{
+.tx-color{
     color: #316fbc;
 }
-.title_size{
+.size-15{
 	font-size: 15px;
 }
-.title_transform, .item{
+.uppercase{
 	text-transform: uppercase;
 }
-.title_bold, .food_name, .new_bold{
+.tx-bold{
 	font-weight: bold;
 }
-.food_name{
-	font-size: 36px;
+.food-name{
     color: #194081;
-    line-height: 0.5;
-    margin-bottom: 11px;
+	line-height: 0.5;
+	margin-bottom: 11px;
+	font-size: 36px;
 }
-.food_today, .photo_new{
+.width-100{
 	width: 100%;
-	height: auto;
 }
 .time{
 	color: gray;
-	margin: 0px 0px 6px 0px;
+	margin-bottom: 6px;
 }
-.center{
+.align-center{
 	text-align: center;
 }
-.tx_red, #link_visit:hover, #link_youtube:hover, .new_hover:hover{
+.tx-red, #link_visit:hover, #link_youtube:hover, .new-hover:hover{
 	color: red;
 }
-.link_visit{
+.float-right{
 	float: right;
 }
 .news{
 	width: 28%;
 	min-height:890px;
-	margin: 18px 0px;
+	margin: 8.9% 0px;
 }
-.food_suggest{
-	background-image: url('images/food_other.jpg');
+.food-suggest{
+	background-image: url(../images/food_other.jpg);
 	background-size: cover;
 	clear: left;
 	min-height: 600px;
