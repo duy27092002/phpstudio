@@ -7,43 +7,47 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<form id="form-registration">
+	<form id="registration" action="#" method="post" target="_blank">
 		<h2 class="align-center">Đăng ký thành viên</h2>
 		<p>Để đăng ký thành viên, bạn cần khai báo tất cả các ô trống dưới đây</p>
 		<div class="padding-0-10">
-			<p><input type="text" id="họ_đệm" name="họ_đệm"placeholder="Họ và tên đệm" class="width-98 padding-10"></p>
-			<p><input type="text" id="tên" name="tên" placeholder="Tên" class="width-98 padding-10"></p>
-			<p><input type="text" id="tên_đăng_nhập" name="tên_đăng_nhập" placeholder="Tên đăng nhập" class="width-98 padding-10"></p>
+			<p><input type="text" id="surname_middle_name" name="surname_middle_name" placeholder="Họ và tên đệm" class="width-98 padding-10"></p>
+			<p><input type="text" id="name" name="name" placeholder="Tên" class="width-98 padding-10"></p>
+			<p><input type="text" id="username" name="username" placeholder="Tên đăng nhập" class="width-98 padding-10"></p>
 			<p><input type="email" id="email" name="email" placeholder="Email" class="width-98 padding-10"></p>
-			<p><input type="password" id="mật_khẩu_lần1" name="mật_khẩu_lần1" placeholder="Mật khẩu" class="width-98 padding-10"></p>
-			<p><input type="password" id="mật_khẩu_lần2" name="mật_khẩu_lần2" placeholder="Lặp lại mật khẩu" class="width-98 padding-10"></p>
+			<p><input type="password" id="password" name="password" placeholder="Mật khẩu" class="width-98 padding-10"></p>
+			<p><input type="password" id="password" name="password" placeholder="Lặp lại mật khẩu" class="width-98 padding-10"></p>
 			<table>
 				<tr>
 					<td class="width-70"><label><b>Giới tính</b></label></td>
 					<td>
-						<input type="radio" id="N/A" name="giới_tính" value="N/A">
+						<input type="radio" id="N/A" name="gender" value="N/A">
 						<label for="N/A"><b>N/A</b></label>
 					</td>
 					<td>
-						<input type="radio" id="Nam" name="giới_tính" value="Nam">
-						<label for="Nam"><b>Nam</b></label>
+						<input type="radio" id="male" name="gender" value="Nam">
+						<label for="male"><b>Nam</b></label>
 					</td>
 					<td>
-						<input type="radio" id="Nữ" name="giới_tính" value="Nữ">
-						<label for="Nữ"><b>Nữ</b></label>
+						<input type="radio" id="female" name="gender" value="Nữ">
+						<label for="female"><b>Nữ</b></label>
 					</td>
 				</tr>
 			</table>
 			<p>
-				<input type="text" id="ngày_sinh" name="ngày_sinh" placeholder="Ngày tháng năm sinh" class="width-94 padding-10">
-				<button class="padding-10"><i class="fa fa-calendar"></i></button>
+				<input type="date" id="birthday" name="birthday" placeholder="Ngày tháng năm sinh" class="width-98 padding-10">
 			</p>
-			<p><input type="text" id="chữ_ký" name="chữ_ký" placeholder="Chữ ký" class="width-98 height-60 padding-10"></p>
+			<p><input type="text" id="signature" name="signature" placeholder="Chữ ký" class="width-98 height-60 padding-10"></p>
 			<p>
-				<input type="text" id="câu_hỏi" name="câu_hỏi" placeholder="Câu hỏi bảo mật" class="width-94 padding-10">
-				<button class="padding-10"><i class="fa fa-caret-down"></i></button>
+				<input list="option" type="text" id="question" name="question" placeholder="Câu hỏi bảo mật" class="width-98 padding-10">
+				<datalist id="option">
+					<option value="question 1"></option>
+					<option value="question 2"></option>
+					<option value="question 3"></option>
+					<option value="question 4"></option>
+				</datalist>
 			</p>
-			<p><input type="text" id="trả_lời" name="trả_lời" placeholder="Trả lời câu hỏi" class="width-98 padding-10"></p>
+			<p><input type="text" id="answer_question" name="answer_question" placeholder="Trả lời câu hỏi" class="width-98 padding-10"></p>
 		</div>
 		<div class="align-center">
 			<p>

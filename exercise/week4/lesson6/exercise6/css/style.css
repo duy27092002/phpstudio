@@ -1,4 +1,4 @@
-#form-login{
+#login{
 	width: 30%;
 	margin: 0px auto;
 	border: 5px solid #1E90FF;
@@ -49,7 +49,7 @@
 .width-75{
 	width: 75%;
 }
-#login{
+#sign_in{
 	background-color: #1E90FF;
 }
 .padding-10{
