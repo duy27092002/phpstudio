@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 4</title>
+</head>
+<body>
+	<h2>Tính giai thừa</h2>
+	<form action="#">
+		<p>Nhập vào hệ số giai thừa:</p>
+		<p><input type="text" id="value" required></p>
+		<p><input type="button" onClick="getFactorials()" value="Tính giai thừa"></p>
+		<p id="result"></p>
+	</form>
+	<script type="text/javascript">
+		function getFactorials() {
+			var getValue = document.getElementById('value').value;
+			if (isNaN(getValue)) {
+				alert('Hãy nhập một số !');
+				return false;
+			}else if (getValue < 0){
+				alert('Hãy nhập một số nguyên dương');
+				return false;
+			}
+			else {
+				var tempt = 1;
+				for (var i = 2 ; i<=getValue ; i++){
+					tempt = tempt * i;
+			
+				};
+				document.getElementById('result').innerHTML = getValue + '! = ' + tempt;
+				return true;
+			}
+		}
+	</script>
+</body>
+</html>

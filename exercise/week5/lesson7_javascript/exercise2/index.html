@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 2</title>
+</head>
+<body>
+	<h2>Giải phương trình bậc nhất: ax + b = 0</h2>
+	<p>Nhập vào hệ số a:</p>
+	<p><input type="text" id="firstCoefficient" required></p>
+	<p>Nhập vào hệ số b:</p>
+	<p><input type="text" id="secondCoefficient" required></p>
+	<p>Phương trình bậc nhất của bạn đang có dạng</p>
+	<p id="userFunction"></p>
+	<p><input type="button" value="Tìm x" onClick="validate()" id="hide"></p>
+	<p id="result"></p>
+	<script type="text/javascript">
+		function validate() {
+			var firstCoefficient = document.getElementById('firstCoefficient').value;
+			var secondCoefficient = document.getElementById('secondCoefficient').value;
+			if (firstCoefficient == "") {
+				alert('Không được để trống!');
+				return false;
+			}
+			else if(isNaN(firstCoefficient)) {
+				alert('Xin hãy nhập số!');
+				return false;
+			}
+			else if(secondCoefficient == ""){
+				alert('Không được để trống!');
+				return false;
+			}
+			else if(isNaN(secondCoefficient)){
+				alert('Xin hãy nhập số!');
+				return false;
+			}
+			else{
+				function showTheFunction() {
+					document.getElementById('userFunction').innerHTML = firstCoefficient + 'x + ' + secondCoefficient + ' = 0';
+				};
+				function getResult() {
+					var result = (-secondCoefficient)/(firstCoefficient);
+					document.getElementById('result').innerHTML = '<=> x = ' + result;
+					document.getElementById('hide').style.display = 'none';
+				};
+				showTheFunction();
+				getResult();
+			}
+		}
+	</script>
+</body>
+</html>

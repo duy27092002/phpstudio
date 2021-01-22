@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 5</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<form action="#" id="infoForm" name="infoForm">
+			<div class="row">
+				<div class="col-2"><b>Name:</b></div>
+				<div class="col-4">
+					<input type="text" id="name" name="Name">
+					<small class="d-none text-danger" id="name-warning">Không được để trống trường này!</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2"><b>Email:</b></div>
+				<div class="col-4">
+					<input type="text" id="email" name="Email">
+					<small class="d-none text-danger" id="email-warning">Không được để trông trường này!</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2"><label><b>Country:</b></label></div>
+				<div class="col-4">
+					<select name="countries">
+						<option value="-1" selected> Select-Country</option>
+						<option value="1" id="vietnam">Viet Nam</option>
+						<option value="2" id="japan">Japan</option>
+						<option value="3" id="usa">USA</option>
+					</select>
+					<small class="d-none text-danger" id="country-warning">Cần phải chọn Country</small>
+				</div>
+			</div>
+			<p><input type="submit" name="login" value="Send info" onclick="validateFormAndGetInfo()"></p>
+			<p id="resultName"></p>
+			<p id="resultEmail"></p>
+			<p id="resultCountry"></p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function validateFormAndGetInfo() {
+			var  userName = getElementById('name').value;
+			var userEmail = getElementById('email').value;
+			var userCountry = getElementById('countries').value;
+			var atpos = userEmail.indexOf('@');
+				dotpos = userEmail.lastIndexOf('.');
+			if (userName == "") {
+				document.getElementById('name-warning').style.display = 'block';
+				document.infoForm.Name.focus();
+			}
+			else if (userEmail == ""){
+				document.getElementById('email-warning').style.display = 'block';
+				document.infoForm.Email.focus();
+			}
+			else if (userCountry == "-1"){
+				document.getElementById('country-warning').style.display = 'block';
+				document.infoForm.countries.focus();
+			}
+			else if (atpos < 1 || (dotpos - atpos < 2)) {
+				alert('Email chưa đúng định dạng!');
+				document.infoForm.Email.focus();	
+			}
+			else {
+				document.getElementById('resultName').innerHTML = 'Name: ' + userName;
+				document.getElementById('resultCountry').innerHTML = 'Country: ' + userCountry;
+				document.getElementById('resultEmail').innerHTML = 'Email: ' + userEmail;
+			}
+			return true;
+		}
+	</script>
+</body>
+</html>

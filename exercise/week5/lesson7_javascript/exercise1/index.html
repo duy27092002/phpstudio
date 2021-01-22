@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 1</title>
+</head>
+<body>
+	<form action="#">
+		<label>Nhập vào số a:</label>
+		<p><input type="text" id="number" placeholder="Nhập ở đây" required></p>
+		<p><input type="button" onClick="check()" value="Kiểm tra"></input></p>
+		<p id="checkNaN"></p>
+		<p id="result"></p>
+	</form>
+	<script type="text/javascript">
+		function check() {
+			var valueUser = document.getElementById('number').value;
+			var getTrimValueUser = valueUser.trim();
+			if (isNaN(getTrimValueUser)) {
+				alert('Hãy nhập vào một số !');
+				return false;
+			} else {
+				if (getTrimValueUser >= 1 && getTrimValueUser <=10 || getTrimValueUser >=50 && getTrimValueUser <=100) {
+					document.getElementById('result').innerHTML = parseInt(getTrimValueUser) + ' nằm trong đoạn [1;10] hoặc [50;100] (lấy phần nguyên)';
+				} else {
+					document.getElementById('result').innerHTML = parseInt(getTrimValueUser) + ' không nằm trong đoạn [1;10] hoặc [50;100]';
+				}
+				return true;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 3</title>
+</head>
+<body>
+	<div>
+		<h2>Tìm max - min</h2>
+		<form action="#">
+			<p>Nhập vào số thứ nhất:</p>
+			<p><input type="number" id="firstNumber"></p>
+			<p>Nhập vapf số thứ hai:</p>
+			<p><input type="number" id="secondNumber"></p>
+			<p>Nhập vào số thứ ba:</p>
+			<p><input type="number" id="thirdNumber"></p>
+			<p><input type="button" onClick="getMaxMin()" value="Hiển thị max - min"></input></p>
+			<h4 id="resultMax"></h4>
+			<h4 id="resultMin"></h4>
+		</form>
+		<script type="text/javascript">
+			function getMaxMin() {
+				var valueFirst = document.getElementById('firstNumber').value;
+				var valueSecond = document.getElementById('secondNumber').value;
+				var valueThird = document.getElementById('thirdNumber').value;
+				var array = [];
+					array.push(valueFirst);
+					array.push(valueSecond);
+					array.push(valueThird);
+				var minValue = Math.min.apply(null,array);
+				var maxValue = Math.max.apply(null,array);
+				document.getElementById('resultMin').innerHTML ='<h3>Số nhỏ nhất là: ' + minValue + '</h3>';
+				document.getElementById('resultMax').innerHTML ='<h3>Số lớn nhất là: ' + maxValue + '</h3>';
+			}
+		</script>
+	</div>
+</body>
+</html>

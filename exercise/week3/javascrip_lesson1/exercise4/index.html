@@ -26,19 +26,17 @@
 				var a = document.getElementById('firstNumber').value;
 				var b = document.getElementById('secondNumber').value;
 				var c,d;
-				function compare() {
-					if (a>b) {
-						c=a;
-						d=b;
-					} else {
-						c=b;
-						d=a;
-					}
-				}
-				compare();
-				for (var i = 1; i <= c/2; i++) {
-					if (c%i===0 && d%i===0) {
-						var j = i;
+				if (a>b) {	
+					for (var i = 1; i <= b; i++) {
+						if (a%i===b%i && b%i===0) {
+							var j = i;
+							}
+						}
+				}else{
+					for (var i = 1; i <= a; i++) {
+						if (a%i===0 && b%i===a%i) {
+							var j = i;
+						}
 					}
 				}
 				document.getElementById('result').innerHTML = j;
