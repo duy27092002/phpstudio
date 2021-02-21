@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 3 (JS2)</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+	<script src="../js-library/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Máy tính</h2>
+		<div class="row mb-4">
+			<div class="col-3"><b>Số thứ nhất:</b></div>
+			<div class="col-5">
+				<input type="number" name="firstNumber" id="firstNumber" class="form-control">
+			</div>
+			<div class="col-3 text-danger" id="error-firstNumber"></div>
+		</div>
+		<div class="row mb-4">
+			<div class="col-3"><b>Số thứ hai:</b></div>
+			<div class="col-5">
+				<input type="number" name="secondNumber" id="secondNumber" class="form-control">
+			</div>
+			<div class="col-3 text-danger" id="error-secondNumber"></div>
+		</div>
+		<div class="row mb-4">
+			<div class="col-3"><b>Kết quả:</b></div>
+			<div class="col-5 border p-1" id="result"></div>
+		</div>
+		<div class="row">
+			<button class="btn btn-secondary mr-2" type="submit" onclick="validate()" id="addition">Cộng</button>
+			<button class="btn btn-secondary mr-2" type="submit" onclick="validate()" id="subtraction">Trừ</button>
+			<button class="btn btn-secondary mr-2" type="submit" onclick="validate()" id="multiplication">Nhân</button>
+			<button class="btn btn-secondary mr-2" type="submit" onclick="validate()" id="division">Chia</button>
+			<button class="btn btn-secondary" type="reset" onclick="validate()" id="deleteData">Xóa trắng</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function validate() {
+			var getFirstNumber = document.getElementById('firstNumber').value;
+			var getSecondNumber = document.getElementById('secondNumber').value;
+			if (getFirstNumber < 1 || getFirstNumber > 100) {
+				document.getElementById('error-firstNumber').innerHTML = 'Hãy nhập số từ 1 đến 100';
+				document.getElementById('firstNumber').style.border = '1px solid red';
+				document.getElementById('firstNumber').focus();
+			}
+			else if (getSecondNumber < 1 || getSecondNumber > 100) {
+				document.getElementById('error-secondNumber').innerHTML = 'Hãy nhập số từ 1 đến 100';
+				document.getElementById('secondNumber').style.border = '1px solid red';
+				document.getElementById('secondNumber').focus();
+			}
+			else{
+				document.getElementById('addition').addEventListener("dblclick", addition);
+				function addition() {
+					document.getElementById('result').innerHTML = Number(getFirstNumber) + Number(getSecondNumber);
+				}
+				document.getElementById('subtraction').addEventListener("dblclick", subtraction);
+				function subtraction() {
+					var getSubtraction = getFirstNumber - getSecondNumber;
+					document.getElementById('result').innerHTML = getSubtraction;
+				}
+				document.getElementById('multiplication').addEventListener("dblclick", multiplication);
+				function multiplication() {
+					document.getElementById('result').innerHTML = getFirstNumber * getSecondNumber;
+				}
+				document.getElementById('division').addEventListener("dblclick", division);
+				function division() {
+					document.getElementById('result').innerHTML = getFirstNumber / getSecondNumber;
+				}
+				document.getElementById('deleteData').addEventListener("click", deleteData);
+				function deleteData() {
+					var getFirstNumber = '';
+					var getSecondNumber = '';
+					document.getElementById('firstNumber').value = getFirstNumber;
+					document.getElementById('secondNumber').value = getSecondNumber;
+					document.getElementById('result').innerHTML = '';
+				}
+			}
+			var setFirstNumber = document.getElementById('firstNumber');
+			var setSecondNumber = document.getElementById('secondNumber');
+			setFirstNumber.addEventListener('keyup', function () {
+				document.getElementById('firstNumber').style.border = '1px solid green';
+				document.getElementById('error-firstNumber').style.display = 'none';
+			});
+			setSecondNumber.addEventListener('keyup', function () {
+				document.getElementById('secondNumber').style.border = '1px solid green';
+				document.getElementById('error-secondNumber').style.display = 'none';
+			});
+			setFirstNumber.addEventListener('click', function () {
+				document.getElementById('firstNumber').style.border = '1px solid green';
+				document.getElementById('error-firstNumber').style.display = 'none';
+			});
+			setSecondNumber.addEventListener('click', function () {
+				document.getElementById('secondNumber').style.border = '1px solid green';
+				document.getElementById('error-secondNumber').style.display = 'none';
+			});
+		}
+	</script>
+</body>
+</html>

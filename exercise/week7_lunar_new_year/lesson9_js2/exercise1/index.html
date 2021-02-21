@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 1 (JS2)</title>
+</head>
+<body>
+	<div class="container">
+		<h2>Get information</h2>
+		<table>
+			<tr>
+				<td><b>Your Job:</b></td>
+				<td><input type="text" name="job" id="jobName"></td>
+			</tr>
+			<tr>
+				<td><b>Your Location:</b></td>
+				<td><input type="text" name="location" id="location"></td>
+			</tr>
+			<tr>
+				<td><b>Partner's Name:</b></td>
+				<td><input type="text" name="partnerName" id="partnerName"></td>
+			</tr>
+			<tr>
+				<td><b>Number of Children:</b></td>
+				<td><input type="number" name="numberOfChildren" id="numberOfChildren"></td>
+			</tr>
+		</table>
+		<p><input type="submit" value="Send Info" onclick="tellFortune()"></p>
+		<p id="result"></p>
+		<script type="text/javascript">
+			function tellFortune() {
+				var getJobName = document.getElementById('jobName').value;
+				var getLocation = document.getElementById('location').value;
+				var getPartnerName = document.getElementById('partnerName').value;
+				var getNumberOfChildren = document.getElementById('numberOfChildren').value;
+				if (getNumberOfChildren == 1) {
+					document.getElementById('result').innerHTML = '"You will be a ' + getJobName + ' in ' + getLocation + ', and married to ' + getPartnerName + ' with ' + getNumberOfChildren + ' kid".';
+				} else if (getNumberOfChildren <= 0) {
+					document.getElementById('result').innerHTML = '"You will be a ' + getJobName + ' in ' + getLocation + ', and married to ' + getPartnerName + ' without kid".';
+				} else {
+					document.getElementById('result').innerHTML = '"You will be a ' + getJobName + ' in ' + getLocation + ', and married to ' + getPartnerName + ' with ' + getNumberOfChildren + ' kids".';
+				}
+			}
+		</script>
+	</div>
+</body>
+</html>

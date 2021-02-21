@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 1</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<form action="#" id="info">
+			<div class="form-group">
+				<label for="firstName"><b>First name</b></label>
+				<input type="text" name="firstName" id="firstName" class="form-control">
+				<span id="firstName-error" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label for="lastName"><b>Last name</b></label>
+				<input type="text" name="lastName" id="lastName" class="form-control">
+				<span id="lastName-error" class="text-danger"></span>
+			</div>
+			<div class="form-group form-check-inline">
+				<label class="form-check-label" for="male">
+					<input type="radio" name="gender" id="male" class="form-check-input" value="male">Male
+				</label>
+			</div>
+			<div class="form-group form-check-inline">
+				<label class="form-check-label" for="female">
+					<input type="radio" name="gender" id="female" class="form-check-input" value="female">Female
+				</label>
+			</div>
+			<div class="form-group">
+				<input type="date" name="date" id="date" class="form-control">
+			</div>
+			<p><input type="button" value="Submit" class="btn btn-primary text-white" onclick="getInfo()"></p>
+		</form>
+		<p id="result"></p>
+		<script type="text/javascript">
+			function getInfo() {
+				var getFirstName = document.getElementById('firstName').value;
+				var getLastName = document.getElementById('lastName').value;
+				var getGender = document.getElementsByName('gender');
+				var getBirthDay = document.getElementById('date').value;
+				for (var i = 0; i < getGender.length; i++) {
+					if (getGender[i].checked === true) {
+						var resultGender = document.getElementById('result').innerHTML = 'Your gender: ' + getGender[i].value;
+					}
+				}
+				if (getFirstName == "") {
+					document.getElementById('firstName-error').innerHTML = 'Trường này bắt buộc nhập';
+					document.getElementById('firstName').style.border = '1px solid red';
+					document.getElementById('firstName').focus();	
+				}
+				else if(getLastName == ""){
+					document.getElementById('lastName-error').innerHTML = 'Trường này bắt buộc nhập';
+					document.getElementById('lastName').style.border = '1px solid red';
+					document.getElementById('lastName').focus();
+				}
+				else {
+					document.getElementById('result').innerHTML = 'Your first name: ' + getFirstName + '<br>' + 'Your last name: ' + getLastName + '<br>' + 'Your birthday: ' + getBirthDay +'<br>'+ resultGender;
+				}
+				return true;
+			}
+			var getFirstName = document.getElementById('firstName');
+			var getLastName = document.getElementById('lastName');
+			getFirstName.addEventListener('keyup',function () {
+				var getFirstName = document.getElementById('firstName').value;
+				if (getFirstName !== "") {
+					document.getElementById('firstName-error').innerHTML ='';
+					document.getElementById('firstName').style.border = '1px solid green';
+				}
+			});
+			getLastName.addEventListener('keyup', function () {
+				var getLastName = document.getElementById('lastName').value;
+				if (getLastName !== "") {
+					document.getElementById('lastName-error').innerHTML ='';
+					document.getElementById('lastName').style.border = '1px solid green';
+				}
+			});
+		</script>
+	</div>
+</body>
+</html>

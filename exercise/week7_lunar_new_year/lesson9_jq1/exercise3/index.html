@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Exercise 3 (JQ1)</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+	<script src="../js-library/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<form action="#" id="info_form">
+			<div class="row">
+				<div class="col-2"><b>Name:</b></div>
+				<div class="col-4">
+					<input type="text" id="name" class="form-control">
+				</div>
+			</div>
+			<p class="text-danger" id="error_name"></p>
+			<div class="row">
+				<div class="col-2"><b>Email:</b></div>
+				<div class="col-4">
+					<input type="text" id="email" class="form-control">
+				</div>
+			</div>
+			<p class="text-danger" id="error_email"></p>
+			<p class="text-danger" id="wrong_format"></p>
+			<div class="row">
+				<div class="col-2"><label><b>Country:</b></label></div>
+				<div class="col-4">
+					<select id="countries">
+						<option value="-1" selected> Select-Country</option>
+						<option value="Viet Nam">Viet Nam</option>
+						<option value="Japan">Japan</option>
+						<option value="USA">USA</option>
+					</select>
+				</div>
+			</div>
+			<p class="text-danger" id="error_country"></p>
+			<p><input type="button" value="Send info" id="send_info_btn"></p>
+			<p id="result_name" class="text-success"></p>
+			<p id="result_email" class="text-success"></p>
+			<p id="result_country" class="text-success"></p>
+		</form>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#send_info_btn').click(function () {
+				var getName = $('#name').val();
+				var getEmail = $('#email').val();
+				var getCountry = $('#countries').val();
+				var emptyDataError = 'Không được để trống trường này!';
+				var emailWrongFomat = 'Email không đúng định dạng!';
+				var checkEmail = /\w+@\w*\.\w+/.test(getEmail);
+				var indexDot = getEmail.indexOf('.');
+				var indexStandard = getEmail.indexOf('@');
+				var checkIndexDot = indexStandard - indexDot;
+				if (getName == "") {
+					$('#error_name').text(emptyDataError);
+					$('#name').css('border-color', 'red');
+					$('#name').focus();
+				} else if (getEmail == "") {
+					$('#error_email').text(emptyDataError);
+					$('#email').css('border-color', 'red');
+					$('#email').focus();
+				} else if (getCountry == "-1") {
+					$('#error_country').text(emptyDataError);
+					$('#countries').focus();
+				} else if (checkEmail == false || checkIndexDot > 1 || indexStandard == 0) {
+					$('#wrong_format').text(emailWrongFomat);
+					$('#email').css('border-color', 'red');
+					$('#email').focus();
+				} 
+				else {
+					$('#result_name').text('Name: ' + getName);
+					$('#result_email').text('Email: ' + getEmail);
+					$('#result_country').text('Country: ' + getCountry);
+				}
+			});
+			var getName = document.getElementById('name');
+			var getEmail = document.getElementById('email');
+			var getCountry = document.getElementById('countries');
+			getName.addEventListener('keyup', function () {
+				$('#error_name').text('');
+				$('#name').css('border-color', 'black');
+			});
+			getEmail.addEventListener('keyup', function () {
+				$('#error_email').text('');
+				$('#wrong_format').text('');
+				$('#email').css('border-color', 'black');
+			});
+			getCountry.addEventListener('click', function () {
+				$('#error_country').text('');
+			});
+		});
+	</script>
+</body>
+</html>

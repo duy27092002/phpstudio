@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 2 (JS2)</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Tiền lương và thuế</h2>
+		<table>
+			<tr>
+				<td><b>Tiền lương:</b></td>
+				<td>
+					<input type="text" name="salary" id="salary" placeholder="Nhập số tiền ở đây..." class="form-control">
+				</td>
+				<td><span id="error" class="text-danger"></span></td>
+			</tr>
+		</table>
+		<p><input type="submit" value="Tính tiền thuế" onclick="getTaxMoney()"></p>
+		<p id="result"></p>
+	</div>
+	<script type="text/javascript">
+		function getTaxMoney() {
+			var getSalary = document.getElementById('salary').value;
+			var taxMoney = (10/100)*getSalary;
+			if (getSalary == "") {
+				document.getElementById('error').innerHTML = 'Không được để trống!';
+				document.getElementById('salary').style.border = '2px solid red';
+				document.getElementById('salary').focus();
+			}else if (isNaN(getSalary) == true) {
+				document.getElementById('error').innerHTML = 'Hãy nhập dữ liệu là số!';
+				document.getElementById('salary').style.border = '2px solid red';
+				document.getElementById('salary').focus();
+			}else if (getSalary <= 0) {
+				document.getElementById('error').innerHTML = 'Không tính toán được!';
+				document.getElementById('salary').style.border = '2px solid red';
+				document.getElementById('salary').focus();
+			}
+			else {
+				if (getSalary >= 500) {
+					document.getElementById('result').innerHTML = 'Tiền thuế phải nộp là: ' + taxMoney;
+				} else {
+					document.getElementById('result').innerHTML = 'Bạn không phải nộp thuế';
+				}
+			}
+			var getSalary = document.getElementById('salary');
+			getSalary.addEventListener('keyup', function () {
+				document.getElementById('error').innerHTML = '';
+				document.getElementById('salary').style.border = '2px solid green';
+			});
+		}
+	</script>
+</body>
+</html>

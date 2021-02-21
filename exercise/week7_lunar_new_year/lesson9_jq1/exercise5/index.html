@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 5 (JQ1)</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="../js-library/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container mt-2">
+		<h3 class="text-center bg-black text-white mb-0 rounded py-3" >Brand Logo</h3>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-action slide_down_dashboard bg-dark">
+				<a href="#" class="text-decoration-none text-white">
+					<span><i class="fa fa-tachometer mr-2"></i>Dashboard</span>
+				</a>
+				<ul class="list-group mt-2 d_none slide_show_dashboard">
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 1
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 2
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 3
+					</li>
+				</ul>
+			</li>
+			<li class="list-group-item list-group-item-action slide_down_ui_elements bg-dark">
+				<a href="#" class="text-decoration-none text-white">
+					<span><i class="fa fa-gift mr-2"></i>UI Elements</span>
+				</a>
+				<ul class="list-group mt-2 d_none slide_show_ui_elements">
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 1
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 2
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 3
+					</li>
+				</ul>
+			</li>
+			<li class="list-group-item list-group-item-action slide_down_services bg-dark">
+				<a href="#" class="text-decoration-none text-white">
+					<span><i class="fa fa-globe mr-2"></i>Services</span>
+				</a>
+				<ul class="list-group mt-2 d_none slide_show_services">
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 1
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 2
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 3
+					</li>
+				</ul>
+			</li>
+			<li class="list-group-item list-group-item-action slide_down_new bg-dark">
+				<a href="#" class="text-decoration-none text-white">
+					<span><i class="fa fa-car mr-2"></i>New</span>
+				</a>
+				<ul class="list-group mt-2 d_none slide_show_new">
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 1
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 2
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 3
+					</li>
+				</ul>
+			</li>
+			<li class="list-group-item list-group-item-action slide_down_profile bg-dark">
+				<a href="#" class="text-decoration-none text-white">
+					<span><i class="fa fa-user mr-2"></i>Profile</span>
+				</a>
+				<ul class="list-group mt-2 d_none slide_show_profile">
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 1
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 2
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 3
+					</li>
+				</ul>
+			</li>
+			<li class="list-group-item list-group-item-action slide_down_users bg-dark">
+				<a href="#" class="text-decoration-none text-white">
+					<span class="title"><i class="fa fa-users mr-2"></i>Users</span>
+				</a>
+				<ul class="list-group mt-2 d_none slide_show_users">
+					<li class="list-group-item list-group-item-actiok">
+						<i class="fa fa-angle-right mr-2"></i>Option 1
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 2
+					</li>
+					<li class="list-group-item list-group-item-action">
+						<i class="fa fa-angle-right mr-2"></i>Option 3
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			$(document).ready(function(){
+  				$('.slide_down_dashboard').click(function () {
+					$('.slide_show_dashboard').slideToggle();
+  				});
+  				$('.slide_down_ui_elements').click(function () {
+					$('.slide_show_ui_elements').slideToggle();
+  				});
+  				$('.slide_down_services').click(function () {
+					$('.slide_show_services').slideToggle();
+  				});
+  				$('.slide_down_new').click(function () {
+					$('.slide_show_new').slideToggle();
+  				});
+  				$('.slide_down_profile').click(function () {
+					$('.slide_show_profile').slideToggle();
+  				});
+  				$('.slide_down_users').click(function () {
+					$('.slide_show_users').slideToggle();
+  				});
+			});
+		</script>
+	</div>
+</body>
+</html>

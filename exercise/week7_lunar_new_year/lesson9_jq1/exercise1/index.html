@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 1 (JQ1)</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+	<script src="../js-library/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row bg-danger p-3">
+			<h2 class="text-center">Chu vi và tính diện tích hình chữ nhật</h2>
+		</div>
+		<div class="row p-3">
+			<form action="#" id="calculate">
+				<div class="form-group">
+					<label>Nhập vào chiều dài (đơn vị: mét)</label>
+					<input type="text" name="length" id="length" class="form-control">
+					<p><span class="text-danger" id="error1"></span></p>
+					<p><span class="text-danger" id="error2"></span></p>
+				</div>
+				<div class="form-group">
+					<label>Nhập vào chiều rộng (đơn vị: mét)</label>
+					<input type="text" name="width" id="width" class="form-control">
+					<p><span class="text-danger" id="error3"></span></p>
+					<p><span class="text-danger" id="error4"></span></p>
+				</div>
+				<p><input type="button" value="Tính chu vi và diện tích" class="btn btn-success text-white" id="btnCalculate"></p>
+			</form>
+		</div>
+		<p id="resultPerimeter"></p>
+		<p id="resultAcreage"></p>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#btnCalculate").click(function(){
+				var getLength = $("#length").val();
+				var getWidth = $("#width").val();
+				var getPerimeter = 2 * getLength + getWidth * 2;
+				var getAcreage = getLength * getWidth;
+				var messageEmptyData = 'Không được để trống dữ liệu!';
+				var messageWrongData = 'Hãy nhập dữ liệu số!';
+				if (getLength == "") {
+					$('#error1').text(messageEmptyData);
+					$('#length').focus();
+				} else if (isNaN(getLength) == true) {
+					$('#error2').text(messageEmptyData);
+					$('#length').focus();
+				} else if (getWidth == "") {
+					$('#error3').text(messageEmptyData);
+					$('#width').focus();
+				} else if (isNaN(getWidth) == true) {
+					$('#error4').text(messageEmptyData);
+					$('#width').focus();
+				}
+				else {
+					$("#resultPerimeter").text('Chu vi: '+getPerimeter+'m');
+					$("#resultAcreage").html('Diện tích: '+getAcreage+'m<sup>2</sup>');
+				}
+			});
+			var getLength = document.getElementById('length');
+			var getWidth = document.getElementById('width');
+			getLength.addEventListener('keyup', function () {
+				$('#error1').text('');
+				$('#error2').text('');	
+			});
+			getWidth.addEventListener('keyup', function () {
+				$('#error3').text('');
+				$('#error4').text('');
+			});
+		});
+	</script>
+</body>
+</html>

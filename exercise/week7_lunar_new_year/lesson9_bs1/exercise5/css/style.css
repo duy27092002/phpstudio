@@ -1,0 +1,8 @@
+.width-100{
+	width: 100px;
+}
+@media (max-width: 768px){
+	.align-center{
+		text-align: center;
+	}
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 2 (JQ1)</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+	<script src="../js-library/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Số chẵn lẻ</h2><hr>
+		<label>Nhập số a</label>
+		<input type="text" id="number" class="form-control">
+		<p class="text-danger" id="message_NaN"></p>
+		<p class="text-danger" id="empty_data_error"></p>
+		<button type="button" class="btn btn-success text-white my-3" id="result_btn">Kết quả</button>
+		<p id="even_number" class="text-info"></p>
+		<p id="odd_number" class="text-info"></p>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#result_btn').click(function () {
+				var getNumber = $('#number').val();
+				var messageNaN = 'Hãy nhập dữ liệu là một số dương lớn hơn 1!';
+				var emptyDataError = 'Không được để trống trường nhập này!';
+				if (getNumber == "") {
+					$('#empty_data_error').text(emptyDataError);
+					$('#number').focus();
+				} else if (isNaN(getNumber) == true) {
+					$('#message_NaN').text(messageNaN);
+					$('#number').focus();
+				} else {
+					var evenNumber = '';
+					var oddNumber = '';
+					for (var i = 1; i <= getNumber; i++) {
+						if (i%2 == 0) {
+							evenNumber += i + ' ';
+							
+						} else {
+							oddNumber += i + ' ';
+						}
+					}
+					$('#even_number').text('Các số chẵn từ 1 đến ' + getNumber + ' gồm: ' + evenNumber + ' ');
+					$('#odd_number').text('Các số lẻ từ 1 đến ' + getNumber + ' gồm: ' + oddNumber + ' ');
+				};
+				var getNumber = document.getElementById('number');
+				getNumber.addEventListener('keyup', function () {
+					$('#empty_data_error').text('');
+					$('#message_NaN').text('');
+				});
+			});
+		});
+	</script>
+</body>
+</html>

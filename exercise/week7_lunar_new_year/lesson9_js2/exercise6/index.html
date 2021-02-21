@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 6 (JS2)</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+	<script src="../js-library/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>My favorite movies</h2>
+		<form action="#" class="form-inline mb-5">
+			<label class="form-check-label mr-sm-2 mb-2">
+				Titles <input type="text" name="title" class="form-control" id="title">
+			</label>
+			<label class="form-check-label mr-sm-2 mb-2">
+				Rating <input type="number" name="rating" class="form-control" id="rating">
+			</label>
+			<button class="ml-sm-2" type="button" onclick="addMovies()">Add movies</button>
+		</form>
+		<h4>Your category:</h4>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Rating</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td id="print_title"></td>
+					<td id="print_rating"></td>
+					<td id="print_delete"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript">
+		function addMovies() {
+			var getTitles = $('#title').val();
+			var getRating = $('#rating').val();
+			var displayDeleteBtn = $('<tr></tr>').text('Delete');
+			var displayTitles = $('<tr></tr>').text(getTitles);
+			var displayRating = $('<tr></tr>').text(getRating);
+			$(document).ready(function () {
+				$('#print_title').append(displayTitles);
+				$('#print_rating').append(displayRating);
+				$('#print_delete').append(displayDeleteBtn);
+			});
+		}
+	</script>
+</body>
+</html>

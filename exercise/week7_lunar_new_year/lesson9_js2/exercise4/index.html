@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise 4 (JS2)</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row mb-4">
+			<div class="col-5">
+				<select id="images">
+					<option value="1">image 1</option>
+					<option value="2">image 2</option>
+					<option value="3">image 3</option>
+					<option value="4">image 4</option>
+					<option value="5">image 5</option>
+				</select>
+			</div>
+			<div class="col-5">
+				<button class="btn btn-secondary" type="submit" id="btn-changeImg" onclick="setImageBasedOnSelect()">Change Image</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-5">
+				<img src="images/avatar1.jpg" class="img-fluid" id="imgPlace">
+			</div>
+		</div>
+		<script type="text/javascript">
+			function setImageBasedOnSelect() {
+				var getImgValue = document.getElementById('images').value;
+				var changeSrcImg = document.getElementById('imgPlace');
+				switch (getImgValue){
+					case "1":
+						changeSrcImg.src = 'images/avatar1.jpg';
+						break;
+					case "2": 
+						changeSrcImg.src = 'images/avatar2.jpg';
+						break;
+					case "3":
+						changeSrcImg.src = 'images/avatar3.jpg';
+						break;
+					case "4":
+						changeSrcImg.src = 'images/avatar4.jpg';
+						break;
+					case "5":
+						changeSrcImg.src = 'images/avatar5.jpg';
+				}
+			}
+		</script>
+	</div>
+</body>
+</html>

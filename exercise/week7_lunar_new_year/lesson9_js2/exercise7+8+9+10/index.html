@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shopping Bag (exercise 7+8+9+10/JS2)</title>
+	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="../js-library/jquery.min.js"></script>
+</head>
+<body>
+	<div class="bg-color p-5">
+		<div class="container p-4 bg-white">
+			<div class="row mb-3">
+				<div class="col-4"><p class="text-secondary">Shopping Bag</p></div>
+				<div class="col-2"></div>
+				<div class="col-3">
+					<button class="btn btn-success text-white rounded" type="button" id="delete_selected">Delete selected</button>
+				</div>
+				<div class="col-3">
+					<button class="btn btn-danger text-white rounded" type="button" id="empty_cart">Empty my cart</button>
+				</div>
+			</div><hr>
+			<div class="row mb-3 row-item">
+				<div class="col-1">
+					<input type="checkbox" name="checkItem1" class="selected">
+				</div>
+				<div class="col-2">
+					<button type="button" class="border-0">
+						<img src="images/delete-icn.svg" class="img-fluid">
+					</button>
+				</div>
+				<div class="col-3"><img src="images/item-1.png" class="img-fluid"></div>
+				<div class="col-2">
+					<p>Common Projects<br>Bball High<br><small class="text-secondary">White</small></p>
+				</div>
+				<div class="col-2">
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<button type="button" class="border-0 incBtnItem1" onclick="getPriceItem1_plus()">
+								<img src="images/plus.svg" class="img-fluid">
+							</button>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<input type="button" class="counterItem1_inc counterItem1_dec border-0" value="1" id="counterItem1"></input>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<button type="button" class="border-0 decBtnItem1" onclick="getPriceItem1_minus()">
+								<img src="images/minus.svg" class="img-fluid">
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					$<span id="show_total_price_item1">549</span>
+				</div>
+			</div><hr>
+			<div class="row mb-3 row-item">
+				<div  class="col-1">
+					<input type="checkbox" name="checkItem2" class="selected">
+				</div>
+				<div class="col-2">
+					<button type="button"  class="border-0">
+						<img src="images/delete-icn.svg" class="img-fluid">
+					</button>
+				</div>
+				<div class="col-3"><img src="images/item-2.png" class="img-fluid"></div>
+				<div class="col-2">
+					<p>Maison Margiela<br>Future Sneakers<br>
+					<small class="text-secondary">White</small>
+				</div>
+				<div class="col-2">
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<button type="button" class="border-0 incBtnItem2" onclick="getPriceItem2_plus()">
+								<img src="images/plus.svg" class="img-fluid">
+							</button>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<input type="button" class="counterItem2_inc counterItem2_dec border-0" value="1" id="counterItem2"></input>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<button type="button" class="border-0 decBtnItem2" onclick="getPriceItem2_minus()">
+								<img src="images/minus.svg" class="img-fluid">
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					$<span id="show_total_price_item2">870</span>
+				</div>
+			</div><hr>
+			<div class="row row-item">
+				<div  class="col-1">
+					<input type="checkbox" name="checkItem3" class="selected">
+				</div>
+				<div class="col-2">
+					<button type="button" class="border-0">
+						<img src="images/delete-icn.svg" class="img-fluid">
+					</button>
+				</div>
+				<div class="col-3"><img src="images/item-3.png" class="img-fluid"></div>
+				<div class="col-2">
+					<p>Our Legacy<br>Brushed Scart<br>
+					<small class="text-secondary">Brown</small>
+				</div>
+				<div class="col-2">
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<button type="button" class="border-0 incBtnItem3" onclick="getPriceItem3_plus()">
+								<img src="images/plus.svg" class="img-fluid">
+							</button>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<input type="button" class="counterItem3_inc counterItem3_dec border-0" value="1" id="counterItem3"></input>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<button type="button" class="border-0 decBtnItem3" onclick="getPriceItem3_minus()">
+								<img src="images/minus.svg" class="img-fluid">
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-2">
+					$<span id="show_total_price_item3">349</span>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// addEventListener of two buttons
+			$('#delete_selected').click(function () {
+				$('.container').find('input[class="selected"]').each(function () {
+					if ($(this).is(':checked')) {
+						$(this).parents('.row-item').hide();
+					}
+				});
+			});
+			$('#empty_cart').click(function () {
+				$('.container').find('.row-item').remove();
+			});
+			// increment button
+			var $incBtnItem1 = $('.incBtnItem1');
+			var $counterItem1_inc = $('.counterItem1_inc');
+			$incBtnItem1.click(function () {
+				$counterItem1_inc.val(parseInt($counterItem1_inc.val())+1);
+			});
+			var $incBtnItem2 = $('.incBtnItem2');
+			var $counterItem2_inc = $('.counterItem2_inc');
+			$incBtnItem2.click(function () {
+				$counterItem2_inc.val(parseInt($counterItem2_inc.val())+1);
+			});
+			var $incBtnItem3= $('.incBtnItem3');
+			var $counterItem3_inc = $('.counterItem3_inc');
+			$incBtnItem3.click(function () {
+				$counterItem3_inc.val(parseInt($counterItem3_inc.val())+1);
+			});
+			// decrement button
+			var $decBtnItem1 = $('.decBtnItem1');
+			var $counterItem1_dec = $('.counterItem1_dec');
+			$decBtnItem1.click(function () {
+				$counterItem1_dec.val(parseInt($counterItem1_dec.val())-1);
+			});
+			var $decBtnItem2 = $('.decBtnItem2');
+			var $counterItem2_dec = $('.counterItem2_dec');
+			$decBtnItem2.click(function () {
+				$counterItem2_dec.val(parseInt($counterItem2_dec.val())-1);
+			});
+			var $decBtnItem3 = $('.decBtnItem3');
+			var $counterItem3_dec = $('.counterItem3_dec');
+			$decBtnItem3.click(function () {
+				$counterItem3_dec.val(parseInt($counterItem3_dec.val())-1);
+			});
+			// calculate money of products
+			function getPriceItem1_plus() {
+				var getValueItem1 = document.getElementById('counterItem1').value;
+				var total_price_item1 = 549 * getValueItem1 + 549;
+				document.getElementById('show_total_price_item1').innerHTML = total_price_item1;
+			};
+			function getPriceItem1_minus() {
+				var getValueItem1 = document.getElementById('counterItem1').value;
+				var total_price_item1 = 549 * getValueItem1 - 549;
+				document.getElementById('show_total_price_item1').innerHTML = total_price_item1;
+			};
+			function getPriceItem2_plus() {
+				var getValueItem2 = document.getElementById('counterItem2').value;
+				var total_price_item2 = 870 * getValueItem2 + 870;
+				document.getElementById('show_total_price_item2').innerHTML = total_price_item2;
+			};
+			function getPriceItem2_minus() {
+				var getValueItem2 = document.getElementById('counterItem2').value;
+				var total_price_item2 = 870 * getValueItem2 - 870;
+				document.getElementById('show_total_price_item2').innerHTML = total_price_item2;
+			};
+			function getPriceItem3_plus() {
+				var getValueItem3 = document.getElementById('counterItem3').value;
+				var total_price_item3 = 349 * getValueItem3 + 349;
+				document.getElementById('show_total_price_item3').innerHTML = total_price_item3;
+			};
+			function getPriceItem3_minus() {
+				var getValueItem3 = document.getElementById('counterItem3').value;
+				var total_price_item3 = 349 * getValueItem3 - 349;
+				document.getElementById('show_total_price_item3').innerHTML = total_price_item3;
+			};
+		</script>
+	</div>
+</body>
+</html>

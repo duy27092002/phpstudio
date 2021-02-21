@@ -1,0 +1,27 @@
+.height-225{
+	height: 225px;
+}
+@media (max-width: 576px){
+	.size-responsvie-48{
+		font-size: 48px;
+	}
+}
+@media (max-width: 576px){
+	.size-responsvie-20{
+		font-size: 20px;
+	}
+}
+@media (max-width: 576px){
+	.size-responsvie-18{
+		font-size: 18px;
+	}
+}
+.bg-black{
+	background-color: black;
+}
+.height-120{
+	height: 120px;
+}
+.width-120{
+	width: 120px;
+}
