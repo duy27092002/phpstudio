@@ -7,116 +7,80 @@
 </head>
 <body>
 	<div class="container">
-		<form action="#" id="infoForm" onsubmit="validateFormAndGetInfo()">
-			<div class="row">
-				<div class="col-2"><b>Name:</b></div>
-				<div class="col-4">
-					<input type="text" id="name" class="form-control">
-				</div>
+		<form action="#">
+			<div class="form-group">
+				<label for="name" class="mr-2">Name:</label>
+				<input type="text" name="name" id="name" class="form-control">
+				<p class="text-danger" id="emptyErrorName"></p>
 			</div>
-			<p class="text-danger" id="error-name"></p>
-			<div class="row">
-				<div class="col-2"><b>Email:</b></div>
-				<div class="col-4">
-					<input type="text" id="email" class="form-control">
-				</div>
+			<div class="form-group">
+				<label for="email" class="mr-2">Email:</label>
+				<input type="text" name="email" id="email" class="form-control mr-2">
+				<p class="text-danger" id="errorEmail"></p>
 			</div>
-			<p class="text-danger" id="error-email"></p>
-			<p class="text-danger" id="email-wrong"></p>
-			<div class="row">
-				<div class="col-2"><label><b>Country:</b></label></div>
-				<div class="col-4">
-					<select id="countries">
-						<option value="-1" selected> Select-Country</option>
-						<option value="Viet Nam">Viet Nam</option>
-						<option value="Japan">Japan</option>
-						<option value="USA">USA</option>
-					</select>
-				</div>
+			<div class="form-group">
+				<label for="country" class="mr-2">Country</label>
+				<select id="country" class="form-control" name="country">
+					<option value="-1" checked>Select-Country</option>
+					<option value="Viet Nam">Viet Nam</option>
+					<option value="Japan">Japan</option>
+					<option value="USA">USA</option>
+				</select>
+				<p class="text-danger" id="notSelectYet"></p>
 			</div>
-			<p class="text-danger" id="error-country"></p>
-			<p><input type="submit" value="Send info"></p>
-			<p id="resultName"></p>
-			<p id="resultEmail"></p>
-			<p id="resultCountry"></p>
 		</form>
+		<button type="button" onclick="sendInfo()">Send info</button>
+		<p class="mt-3 text-success" id="result"></p>
 	</div>
 	<script type="text/javascript">
-		function validateFormAndGetInfo() {
-			var message;
-			var userName =document.getElementById('name').value;
-			var userEmail = document.getElementById('email').value;
-			var userCountry = document.getElementById('countries').value;
-			var checkEmail =/\w+@\w+\.\w{2,3}(\.[a-z]{2,3})?$/.test(userEmail);
-			var firstUnderscore = userEmail.indexOf('_');
-			var lastUnderscore = userEmail.lastIndexOf('_');
-			var checkIndexUnderscore = lastUnderscore - firstUnderscore;
-			var indexDot = userEmail.indexOf('.');
-			var indexStandard = userEmail.indexOf('@');
-			var checkIndexDot = indexStandard - indexDot;
-			if (userName == "") {
-				message = 'Không được để trống trường tên!';
-				document.getElementById('error-name').innerHTML = message;
-				document.getElementById('name').style.border = '1px solid red';
+		function sendInfo() {
+			var getName = document.getElementById('name').value;
+			var getEmail = document.getElementById('email').value;
+			var getCountry = document.getElementById('country').value;
+			var messEmptyError = 'Không được để trống trường này';
+			var messErrorEmail = 'Email sai định dạng';
+			var emailFormat = /^\w+@+\w+\.[a-zA-Z0-9]{2,3}(\.[a-z]{2})?$/.test(getEmail);
+			var indexUnderscore = getEmail.indexOf('_');
+			var lastIndexUnderscore = getEmail.lastIndexOf('_');
+			var checkIndexUnderscore = lastIndexUnderscore - indexUnderscore;
+			var indexDot = getEmail.indexOf('.');
+			var indexStandard = getEmail.indexOf('@');
+			var checkIndexDot = indexDot - indexStandard;
+			if (getName == "") {
+				document.getElementById('emptyErrorName').innerHTML = messEmptyError;
+				document.getElementById('name').style.borderColor = 'red';
 				document.getElementById('name').focus();
-			}
-			else if (userEmail == ""){
-				message = 'Không được để trống trường email!';
-				document.getElementById('error-email').innerHTML = message;
-				document.getElementById('email').style.border = '1px solid red';
+			} else if (getEmail == "") {
+				document.getElementById('errorEmail').innerHTML = messEmptyError;
+				document.getElementById('email').style.borderColor = 'red';
 				document.getElementById('email').focus();
-			}
-			else if (userCountry == "-1"){
-				message = 'Hãy chọn quốc gia!';
-				document.getElementById('error-country').innerHTML = message;
-				document.getElementById('countries').focus();
-			}
-			else if (checkEmail == false) {
-				message = 'Email chưa đúng định dạng!';
-				document.getElementById('email-wrong').innerHTML = message;
-				document.getElementById('email').style.border = '1px solid red';
+			} else if (getCountry == "-1") {
+				document.getElementById('notSelectYet').innerHTML = 'Hãy chọn quốc gia';
+				document.getElementById('country').style.borderColor = 'red';
+				document.getElementById('country').focus();
+			} else if (checkIndexUnderscore == 1 || checkIndexDot < 0 || emailFormat == false){
+				document.getElementById('errorEmail').innerHTML = messErrorEmail;
+				document.getElementById('email').style.borderColor = 'red';
 				document.getElementById('email').focus();
+			} else {
+				document.getElementById('result').innerHTML = 'Name: ' + getName + '<br>' + 'Email: ' + getEmail + '<br>' + 'Country: ' + getCountry;
 			}
-			else if (checkIndexUnderscore == 1) {
-				message = 'Email chưa đúng định dạng!';
-				document.getElementById('email-wrong').innerHTML = message;
-				document.getElementById('email').style.border = '1px solid red';
-				document.getElementById('email').focus();
-			}
-			else if (checkIndexDot >= 1) {
-				message = 'Email chưa đúng định dạng!';
-				document.getElementById('email-wrong').innerHTML = message;
-				document.getElementById('email').style.border = '1px solid red';
-				document.getElementById('email').focus();
-			}
-			else {
-				document.getElementById('resultName').innerHTML = '<b>Name: </b>' + userName;
-				document.getElementById('resultCountry').innerHTML = '<b>Country: </b>' + userCountry;
-				document.getElementById('resultEmail').innerHTML = '<b>Email: </b>' + userEmail;
-			}
-			return true;
+			var getName = document.getElementById('name');
+			var getEmail = document.getElementById('email');
+			var getCountry = document.getElementById('country');
+			getName.addEventListener('keyup', function () {
+				document.getElementById('emptyErrorName').innerHTML = '';
+				document.getElementById('name').style.borderColor = 'lightgray';
+			});
+			getEmail.addEventListener('keyup', function () {
+				document.getElementById('errorEmail').innerHTML = '';
+				document.getElementById('email').style.borderColor = 'lightgray';
+			});
+			getCountry.addEventListener('click', function () {
+				document.getElementById('notSelectYet').innerHTML = '';
+				document.getElementById('country').style.borderColor = 'lightgray';
+			});
 		}
-		var userName =document.getElementById('name');
-		var userEmail = document.getElementById('email');
-		var userCountry = document.getElementById('countries');
-		userName.addEventListener('keyup', function () {
-			if (userName !== "") {
-				document.getElementById('error-name').innerHTML = '';
-				document.getElementById('name').style.border = '1px solid green';
-			}
-		});
-		userEmail.addEventListener('keyup', function () {
-			if (userEmail !== "") {
-				document.getElementById('error-email').innerHTML = '';
-				document.getElementById('email').style.border = '1px solid green';
-			}
-		});
-		userCountry.addEventListener('click', function () {
-			if (userCountry !== "") {
-				document.getElementById('error-country').innerHTML = '';
-				document.getElementById('countries').style.border = '1px solid green';
-			}
-		});
 	</script>
 </body>
 </html>
