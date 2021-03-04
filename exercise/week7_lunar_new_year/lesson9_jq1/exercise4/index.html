@@ -5,22 +5,36 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="../js-library/bootstrap.min.css"></script>
 	<script src="../js-library/jquery.min.css"></script>
 	<script src="../js-library/popper.min.css"></script>
 </head>
 <body>
 	<div class="container">
-		<h4 class="text-center">What do you want to do today?</h4>
-		<form action="#">
-			<input type="text" name="nameProduct" id="nameProduct" class="form-control">
-		</form>
-	</div>
-	<script>
-		$(document).ready(function () {
-			var getNameProduct = $('#nameProduct').val();
-			$()
-		});
-	</script>
+        <div class="row">
+            <div class="col-sm-12 col-md-4 com-lg-4"></div>
+            <div class="col-sm-12 col-md-4 col-lg-4 border border-dark p-2">
+                <h5 class="text-center">What do you want to do today?</h5>
+                <input type="text" name="productsUser" id="productsUser" class="form-control border-dark"><br>
+                <ul class="list-group list-group-flush listDisplayed" id="listDisplayed">
+                    <!-- Products will appear here. -->
+               </ul>
+               <div class="pt-5 container">
+                    <div class="row">
+                        <div class="col">
+                            <p id="tasks"><b>0 task</b></p>
+                        </div>
+                        <div class="col text-right">
+                            <button id="btnClear" class="btn btn-outline-danger">Clear All</button>
+                        </div>
+                    </div>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4"></div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
