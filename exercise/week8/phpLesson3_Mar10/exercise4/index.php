@@ -5,86 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<?php include('validate_form.php'); ?>
 </head>
 <body>
 	<div class="container border">
-		<?php
-			$error = array();
-			if ($_SERVER['REQUEST_METHOD'] == "POST") {
-				// validate form
-				$errorMess = "<small class=\"text-danger\">(*) Không được để trống</small>";
-				$gender = $_POST['gender'];
-				$year = $_POST['year'];
-				$payOpt = $_POST['payOpt'];
-				$magazines = $_POST['magazines'];
-				$checked = false;
-				$countCheckbox = 0;
-				if (empty($_POST['lastName'])) {
-					$error['lastName'] = $errorMess;
-				} else {
-					$lastName = $_POST['lastName'];
-				}
-				if (empty($_POST['firstName'])) {
-					$error['firstName'] = $errorMess;
-				} else {
-					$firstName = $_POST['firstName'];
-				}
-				if (empty($_POST['address'])) {
-					$error['address'] = $errorMess;
-				} else {
-					$address = $_POST['address'];
-				}
-				foreach ($magazines as $value) {
-					if ($value == "Time") {
-						$checkValueTime = "checked";
-						$countCheckbox++;
-					}
-					if ($value == "Newsweek") {
-						$checkValueNewsweek = "checked";
-						$countCheckbox++;
-					}
-					if ($value == "Sunday") {
-						$checkValueSunday = "checked";
-						$countCheckbox++;
-					}
-					if ($value == "Vogue") {
-						$checkValueVogue = "checked";
-						$countCheckbox++;
-					}
-					if ($value == "People") {
-						$checkValuePeople = "checked";
-						$countCheckbox++;
-					} 
-				}
-				if ($countCheckbox == 0) {
-					$error['magazines'] = "<small class=\"text-danger\">(*) Phải chọn ít nhất 1 tạp chí</small>";
-				}
-				// listed magazine(s)
-				if (isset($magazines)) {
-					$countMagazine = count($magazines);
-					$magalist = "";
-					for ($i=0; $i <$countMagazine ; $i++) { 
-						if ($i == ($countMagazine -1)) {
-							$magalist .= $magazines[$i];
-						} else {
-							$magalist .= $magazines[$i].", ";
-						}
-					}
-				}?>
-				<!-- open Windows after fill full data -->
-				<script>
-					const openMess = confirm('Check your infomation again, please!');
-					if (openMess) {
-						$windowQuestion = confirm('<?php echo "Do you want to order $magalist magazines for $year and to pay with $payOpt?" ?>')
-					} else {
-						('#lastName').focus();
-					}
-					if ($windowQuestion) {
-						alert('<?php echo"Thank you very much for you order, we will supply as soon as possible the magazines for you to the address: $firstName $lastName , address: $address" ?>')
-					}
-				</script>
-		<?php } ?>
 		<div class="mx-auto my-5">
 			<h1 class="text-center text-success mb-3">Subscription Form</h1>
 			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">

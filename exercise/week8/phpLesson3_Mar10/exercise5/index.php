@@ -11,8 +11,8 @@
 		<?php
 			$error = array();
 			if ($_SERVER['REQUEST_METHOD'] == "POST") {
-				$errEmptyData = "Không được để trống dữ liệu!";
-				$errTypeData = "Chỉ cho phép nhập số!";
+				$errEmptyData = "<small class=\"text-danger\">Không được để trống dữ liệu!</small>";
+				$errTypeData = "<small class=\"text-danger\">Chỉ cho phép nhập số!</small>";
 				// check firstNumber
 				if (empty($_POST['firstNumber'])) {
 					$error['firstNumber'] = $errEmptyData;
@@ -29,19 +29,6 @@
 				} else {
 					$secondNumber = $_POST['secondNumber'];
 				}
-				// caculate
-				if (isset($_POST['plus'])) {
-					$sum = $firstNumber + $secondNumber;
-				}
-				if (isset($_POST['minus'])) {
-					$minus = $firstNumber - $secondNumber;
-				}
-				if (isset($_POST['multiply'])) {
-					$multiply = $firstNumber * $secondNumber;
-				}
-				if (isset($_POST['divide'])) {
-					$divide = $firstNumber / $secondNumber;
-				}
 			}
 		?>
 		<div class="mx-auto p-5 border">
@@ -51,19 +38,13 @@
 					<label>Nhập số a</label>
 					<input type="text" name="firstNumber" class="form-control" value=
 					"<?php if (isset($firstNumber) && !empty($firstNumber)) echo $firstNumber; ?>">
-					<?php
-						if (isset($error['firstNumber'])) { ?>
-							<span class="text-danger"><?php echo $error['firstNumber']; ?></span>
-					<?php } ?>
+					<?php if(isset($error['firstNumber'])) echo $error['firstNumber']; ?>
 				</div>
 				<div class="form-group">
 					<label>Nhập số b</label>
 					<input type="text" name="secondNumber" class="form-control" value=
 					"<?php if (isset($secondNumber) && !empty($secondNumber)) echo $secondNumber; ?>">
-					<?php
-						if (isset($error['secondNumber'])) { ?>
-							<span class="text-danger"><?php echo $error['secondNumber']; ?></span>
-					<?php } ?>
+					<?php if(isset($error['secondNumber'])) echo $error['secondNumber']; ?>
 				</div>
 				<div class="form-group">
 					<button type="submit" name="plus" class="btn btn-success text-white">a + b</button>
@@ -73,19 +54,19 @@
 				</div>
 				<?php
 					if (isset($_POST['plus']) && !empty($secondNumber) && !empty($firstNumber)) { ?>
-						<span class="text-info">a + b = <?php echo $sum ; ?> </span>
+						<span class="text-info">a + b = <?php echo $firstNumber + $secondNumber ; ?> </span>
 					<?php } ?>
 				<?php
 					if (isset($_POST['minus']) && !empty($secondNumber) && !empty($firstNumber)) { ?>
-						<span class="text-info">a - b = <?php echo $minus ; ?> </span>
+						<span class="text-info">a - b = <?php echo $firstNumber - $secondNumber ; ?> </span>
 					<?php } ?>
 				<?php
 					if (isset($_POST['multiply']) && !empty($secondNumber) && !empty($firstNumber)) { ?>
-						<span class="text-info">a * b = <?php echo $multiply ; ?> </span>
+						<span class="text-info">a * b = <?php echo $firstNumber * $secondNumber ; ?> </span>
 					<?php } ?>	
 				<?php
 					if (isset($_POST['divide']) && !empty($secondNumber) && !empty($firstNumber)) { ?>
-						<span class="text-info">a / b = <?php echo $divide ; ?> </span>
+						<span class="text-info">a / b = <?php echo $firstNumber / $secondNumber ; ?> </span>
 					<?php } ?>	
 			</form>
 		</div>

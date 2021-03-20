@@ -5,64 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../front-end_framework/bootstrap.min.css">
+	<?php include('validate_form.php'); ?>
 </head>
 <body>
-	<?php
-		$error = array();
-		$data = array();
-		if ($_SERVER['REQUEST_METHOD'] == "POST") {
-			// get data of input
-			$data['firstName'] = isset($_POST['firstName']) ? $_POST['firstName'] : "";
-			$data['lastName'] = isset($_POST['lastName']) ? $_POST['lastName'] : "";
-			$data['email'] = isset($_POST['email']) ? $_POST['email'] : "";
-			$data['hobby'] =isset($_POST['hobby']) ? $_POST['hobby'] : "";
-			$data['state'] = isset($_POST['state']) ? $_POST['state'] : "";
-			// check data
-			if (empty($data['firstName'])) {
-				$error['firstName'] = "<small class=\"text-danger\">Firstname không được để trống</small>";
-			}
-			if (empty($data['lastName'])) {
-				$error['lastName'] = "<small class=\"text-danger\">Lastname không được để trống</small>";
-			}
-			if (empty($data['email'])) {
-				$error['email'] = "<small class=\"text-danger\">Email không được để trống</small>";
-			}
-			foreach ($data['hobby'] as $hobbyName) {
-				if ($hobbyName == "Badmintion") {
-					$badmintion = "checked";
-				}
-				if ($hobbyName == "Football") {
-					$football = "checked";
-				}
-				if ($hobbyName == "Bicycle") {
-					$bicycle = "checked";
-				}
-			}
-			if ($data['state'] == "Johor") {
-				$checkedJohor = "selected";
-			}
-			if ($data['state'] == "Massachusetts") {
-				$checkedMassachusetts = "selected";
-			}
-			if ($data['state'] == "Washington") {
-				$checkedWashington = "selected";
-			}
-			if (empty($error)) {
-				$countArrHobby = count($data['hobby']);
-				$hobbiesList = "";
-				for ($i=0; $i <$countArrHobby ; $i++) { 
-					if ($i == $countArrHobby -1) {
-						$hobbiesList .= " ".$data['hobby'][$i];
-					} else {
-						$hobbiesList .= $data['hobby'][$i].", ";
-					}
-				}
-				echo "<p class=\"text-info text-center\">Firstname: ".$data['firstName']."<br>Lastname: ".$data['lastName']."<br>Email: ".$data['email'].
-					"<br>Gender: ".$_POST['gender']."<br>State: ".$data['state'].
-					"<br>Hobby: ".$hobbiesList."</p>";
-			}
-		}
-	?>
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-sm-12 col-md-8 col-lg-8 mb-3">
@@ -131,6 +76,7 @@
 				</div>
 			</div>
 		</div>
+		<?php if(isset($result)) echo $result; ?>
 	</div>
 </body>
 </html>
