@@ -47,9 +47,7 @@
 			$arrFilesName = "";
 		} else {
 			$arrFilesName = array();
-			foreach ($_FILES['fileToUpload']['name'] as $fileName) {
-				$arrFilesName[] = $fileName;
-			}
+			$arrFilesName = $_FILES['fileToUpload']['name'];
 			$countFilesName = count($arrFilesName);
 			$showImg = "";
 			for ($i=0; $i <$countFilesName ; $i++) { 

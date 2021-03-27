@@ -23,7 +23,7 @@
 					}
 				}
 				$strUser = $_POST['strUser'];
-				$result = isPalindrome($strUser);
+				$result = isPalindrome(strtolower($strUser));
 			}
 		?>
 	 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">

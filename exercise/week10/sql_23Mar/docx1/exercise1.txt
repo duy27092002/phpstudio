@@ -1,0 +1,83 @@
+******TẠO CƠ SỞ DỮ LIỆU******
+CREATE DATABASE admin;
+
+CREATE TABLE NHANVIEN (
+	ho_nv VARCHAR(255) NOT NULL,
+	ten_lot VARCHAR(255),
+	ten_nv VARCHAR(255) NOT NULL,
+	phai CHAR NOT NULL,
+	luong INT NOT NULL,
+	ma_nv INT NOT NULL,
+	ng_sinh DATE NOT NULL,
+	dia_chi VARCHAR(255) NOT NULL,
+	phg SMALLINT NOT NULL
+);
+
+CREATE TABLE DEAN (
+	ten_da VARCHAR(255) NOT NULL,
+	ma_da SMALLINT NOT NULL,
+	ddiem_da VARCHAR(255) NOT NULL,
+	phg SMALLINT NOT NULL 
+);
+
+CREATE TABLE PHONGBAN (
+	phg SMALLINT NOT NULL AUTO_INCREMENT,
+	ten_phg VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE PHANCONG (
+	ma_nv INT NOT NULL,
+	ma_da SMALLINT NOT NULL,
+	so_gio SMALLINT
+);
+
+INSERT INTO NHANVIEN (ho_nv, ten_lot, ten_nv, phai, luong, ma_nv, ng_sinh, dia_chi, phg)
+VALUES ('Dinh', 'Le', 'Tien', 'Nam', 4000, 123456789, '01/09/1965', 'Nguyen Trai, Q5', 1),
+	('Nguyen', 'Thi', 'Loan', 'Nu', 2500, 333445555, '12/08/1955', 'Nguyen Hue, Q1', 5),
+	('Nguyen', 'Lan', 'Anh', 'Nu', 4300, 666884444, '15/09/1962', 'Le Loi, Q1', 5),
+	('Tran', 'Thanh', 'Tam', 'Nam', 3800, 453453453, '31/07/1972', 'Tran Nao, Q2', 2);
+
+INSERT INTO DEAN (ten_da, ma_da, ddiem_da, phg)
+VALUES ('San pham X', 1, 'Quy Nhon', 5),
+       ('San pham Y', 2, 'Nha Trang', 5),
+       ('San pham Z', 3, 'TP HCM', 5),
+       ('Tin hoc hoa', 10, 'Binh Duong', 4);
+
+INSERT INTO PHONGBAN (phg. ten_phg)
+VALUES (1, 'Nhan su'),
+       (2, 'Ke hoach'),
+       (3, 'Kinh doanh'),
+       (4, 'Marketing'),
+       (5, 'Ke toan');
+
+INSERT INTO PHANCONG (ma_nv, ma_da, so_gio)
+VALUES (123456789, 1, 32),
+       (123456789, 2, 8),
+       (666884444, 3, 40),
+       (453453453, 1, 20);
+
+******TRUY VẤN*******
+1. Hiển thị tất cả thông tin của bảng NHANVIEN
+	SELECT * FROM NHANVIEN
+2. Hiển thị thông tin của nhân viên ở phòng số 5
+	SELECT * FROM NHANVIEN WHERE phg = 5;
+3. Hiển thị nhân viên, họ nhân viên, tên lót và tên nhân viên của những nv ở phòng 5 có lương >=3000
+	SELECT ma_nv, ho_nv, ten_lot, ten_nv FROM NHANVIEN WHERE luong >= 3000;
+4. Hiển thị mã nhân viên, tên nhân viên có lương từ 2000 đến 8000
+	SELECT ma_nv, ten_nv FROM NHANVIEN WHERE luong BETWEEN 2000 AND 8000;
+5. Hiển thị thông tin của những nv ở địa chỉ có tên đường là Nguyễn
+	SELECT * FROM NHANVIEN WHERE dia_chi LIKE 'Nguyen%';
+6. Cho biết số lượng nhân viên
+	SELECT COUNT(ho_nv) AS amount FROM NHANVIEN;
+7. Cho biết số lượng nhân viên của từng phòng ban
+	SELECT COUNT(phg) AS amount, PB.ten_phg, NV.phg
+	FROM PHONGBAN AS PB, NHANVIEN AS NV
+	WHERE PB.phg = NV.phg
+	GROUP BY ten_phg;
+8. Hiển thị thông tin về mã nhân viên, tên nv và tên phòng ban ở phòng kế toán
+	SELECT NV.ma_nv, NV.ten_nv, PB.ten_phg
+	FROM NHANVIEN AS NV, PHONGBAN AS PB
+	WHERE NV.phg = PB.phg
+	GROUP BY ten_phg
+	HAVING ten_phg = 'Ke toan';
+	

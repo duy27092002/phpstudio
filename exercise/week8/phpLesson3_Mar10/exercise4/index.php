@@ -21,7 +21,7 @@
 									Last Name:
 								</div>
 								<div class="col-12 col-sm-12 col-md-9 col-lg-9">
-									<input type="text" name="lastName" class="form-control" id="lastName" value="<?php if (isset($lastName)) echo $lastName ; ?>">
+									<input type="text" name="lastName" class="form-control" id="lastName" value="<?php if (isset($lastName)) echo $lastName ; ?>" autofocus="autofocus">
 								</div>
 							</div>
 							<span><?php if (isset($error['lastName'])) echo $error['lastName']; ?></span>
@@ -100,7 +100,6 @@
 				<input type="reset" class="btn btn-secondary text-white" name="btnReset" value="Reset">
 			</form>
 		</div>
-		
 	</div>
 </body>
 </html>

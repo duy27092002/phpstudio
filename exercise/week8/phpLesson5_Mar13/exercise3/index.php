@@ -66,7 +66,7 @@
 			</div>
 			<div class="form-group">
 				<label>Upload files</label>
-				<input type="file" name="fileToUpload[]" class="form-control-file border" multiple="multiple">
+				<input type="file" name="fileToUpload" class="form-control-file border" multiple="multiple">
 			</div>
 			<input type="submit" name="submitBtn" class="btn btn-primary form-control mt-5" value="Submit">
 		</form>

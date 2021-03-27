@@ -73,10 +73,10 @@
 		<script>
 			const openMess = confirm('Check your infomation again, please!');
 			if (openMess) {
-				$windowQuestion = confirm('<?php echo "Do you want to order $magalist magazines for $year and to pay with $payOpt?" ?>')
+				$windowQuestion = confirm('<?php echo "Do you want to order $magalist magazines for $year and to pay with $payOpt?" ?>');
 			}
 			if ($windowQuestion) {
-				alert('<?php echo"Thank you very much for you order, we will supply as soon as possible the magazines for you to the address: $firstName $lastName , address: $address" ?>')
+				alert('<?php echo"Thank you very much for you order, we will supply as soon as possible the magazines for you to the address: $firstName $lastName , address: $address" ?>');
 			}
 		</script>
 <?php } ?>

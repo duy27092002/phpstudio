@@ -7,7 +7,7 @@
 			if (!in_array($_GET['id'], $item_array_id)) {
 				$count = count($_SESSION['shopping_cart']);
 				$item_array = array(
-            		'item_id' => $_POST['id'],
+            		'item_id' => $_GET['id'],
 					'item_name' => $_POST['hidden_name'],
 					'item_price' => $_POST['hidden_price'],
 					'item_quantity' => $_POST['quantity']
@@ -51,20 +51,30 @@
 		<div class="row text-center">
 		<?php
 			$query = "SELECT * FROM product ORDER BY id ASC";
+			//thực hiện truy vấn $query
 			$result = mysqli_query($connect, $query);
-			if (mysqli_num_rows($result)) {
-				while ($row = mysqli_fetch_array($result)) {?>
+			// mysqli_num_rows trả về số hàng trong tập kết quả theo database
+			if (mysqli_num_rows($result)) { 
+				// mysqli_fetch_array trả về 1 hàng của kết quả theo database
+				while ($row = mysqli_fetch_array($result)) {?> 
 					<div class="col-12 col-sm-12 col-md-6 col-lg-3 mb-3 card-deck">
 						<div class="card p-3">
-							<form method="post" action="index.php?action=add&id=<?php echo $row['id'] ?>">
-								<img src="images/<?php echo $row['image']; ?>" class="img-fluid">
-								<h4 class="text-info mt-3"><?php echo $row['name']; ?></h4>
-								<h4 class="text-danger">$ <?php echo $row['price']; ?></h4>
-								<input type="text" name="quantity" class="form-control mb-3" value="1">
-								<input type="hidden" name="hidden_name" value="<?php echo $row['name']; ?>" class="mb-3">
-								<input type="hidden" name="hidden_price" value="<?php echo $row['price']; ?>" class="mb-3">
-								<input type="submit" name="add_to_cart" class="btn btn-info mb-3" value="Add to cart">
-							</form>
+							<!-- $row['image'] gọi tên ảnh lấy từ database -->
+							<img src="images/<?php echo $row['image']; ?>" class="card-img-top img-fluid">
+							<div class="card-body">
+								<!-- action ở đây được hiển thị trên thanh url khi user add to cart -->
+								<form method="post" action="index.php?action=add&id=<?php echo $row['id'] ?>">
+									<h4 class="text-info mt-3 card-text"><?php echo $row['name']; ?></h4>
+									<h4 class="text-danger card-text">$ <?php echo $row['price']; ?></h4>
+									<!-- type = hidden: ẩn trường đầu vào, lưu trữ csdl cần được cập nhật khi gửi biểu mẫu, lấy cập nhật của người dùng-->
+									<input type="text" name="quantity" class="form-control mb-3 card-text" value="1">
+
+									<input type="hidden" name="hidden_name" value="<?php echo $row['name']; ?>" class="mb-3 card-text">
+									<input type="hidden" name="hidden_price" value="<?php echo $row['price']; ?>" class="mb-3 card-text">
+									
+									<input type="submit" name="add_to_cart" class="btn btn-info mb-3 card-text" value="Add to cart">
+								</form>
+							</div>
 						</div>
 					</div>
 		<?php	}}?>
