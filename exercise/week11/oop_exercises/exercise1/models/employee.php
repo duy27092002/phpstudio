@@ -2,8 +2,8 @@
 	class Employee {
 		private $id;
 		public $name;
-		const workingHoursPerDay = "8";
-		const hourlyRate = "15";
+		const WORKING_HOURS_PERDAY = "8";
+		const HOURLY_RATE = "15";
 		public $totalLeaveTaken;
 		public $workingDays;
 
@@ -25,7 +25,7 @@
 		{
 			$name = $this->name;
 			$workingDays = ($this->totalDays - $this->totalLeaveTaken);
-			$salary = ($this->totalDays - $this->totalLeaveTaken) * self::workingHoursPerDay * self::hourlyRate;
+			$salary = $workingDays * self::WORKING_HOURS_PERDAY * self::HOURLY_RATE;
 
 			return $name." has worked for ".$workingDays." days and taken ".$this->totalLeaveTaken." leaves, ".$name." salary is ".$salary;
 		}
